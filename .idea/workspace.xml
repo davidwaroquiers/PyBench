@@ -26,21 +26,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="tasks.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../pymatgen/pymatgen/io/abinitio/tasks.py">
+      <file leaf-file-name="benchmarks.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/PyBench/core/benchmarks.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1103.6154" vertical-offset="9136" max-vertical-offset="44415">
-              <caret line="2539" column="24" selection-start-line="2539" selection-start-column="24" selection-end-line="2539" selection-end-column="24" />
+            <state vertical-scroll-proportion="2.3351648" vertical-offset="0" max-vertical-offset="2085">
+              <caret line="85" column="47" selection-start-line="85" selection-start-column="47" selection-end-line="85" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="benchmarks.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/PyBench/core/benchmarks.py">
+      <file leaf-file-name="ntpath.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file:///Applications/Canopy.app/appdata/canopy-1.4.1.1975.macosx-x86_64/Canopy.app/Contents/lib/python2.7/ntpath.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6868132" vertical-offset="930" max-vertical-offset="2070">
-              <caret line="87" column="28" selection-start-line="87" selection-start-column="28" selection-end-line="87" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2173" max-vertical-offset="7995">
+              <caret line="163" column="4" selection-start-line="163" selection-start-column="4" selection-end-line="163" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -405,7 +405,11 @@
       <created>1410960021588</created>
       <updated>1410960021588</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="visual bug fix">
+      <created>1410960237213</created>
+      <updated>1410960237213</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -450,20 +454,13 @@
     <MESSAGE value="documentation,&#10;printfunction&#10;removed redundant qadapter" />
     <MESSAGE value="example taskmanager file" />
     <MESSAGE value="create job collection" />
-    <option name="LAST_COMMIT_MESSAGE" value="create job collection" />
+    <MESSAGE value="visual bug fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="visual bug fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../pymatgen/pymatgen/core/structure.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="35235">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../pymatgen/pymatgen/transformations/standard_transformations.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3553" max-vertical-offset="11235">
@@ -865,10 +862,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file:///Applications/Canopy.app/appdata/canopy-1.4.1.1975.macosx-x86_64/Canopy.app/Contents/lib/python2.7/ntpath.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2173" max-vertical-offset="7995">
+          <caret line="163" column="4" selection-start-line="163" selection-start-column="4" selection-end-line="163" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/PyBench/core/benchmarks.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6868132" vertical-offset="930" max-vertical-offset="2070">
-          <caret line="87" column="28" selection-start-line="87" selection-start-column="28" selection-end-line="87" selection-end-column="28" />
+        <state vertical-scroll-proportion="2.3351648" vertical-offset="0" max-vertical-offset="2085">
+          <caret line="85" column="47" selection-start-line="85" selection-start-column="47" selection-end-line="85" selection-end-column="47" />
           <folding />
         </state>
       </provider>

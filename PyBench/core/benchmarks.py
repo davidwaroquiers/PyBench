@@ -82,7 +82,7 @@ class Benchmark():
         inpset = MPStaticVaspInputSet()
         print('testing executable %s\n' % self.subject)
         print("creating input for %s system sizes and %s calculations per size:\n" %
-              (len(self.sizes), self.total / len(self.sizes)))
+              (len(self.sizes), int(self.total / len(self.sizes))))
         sys.stdout.write(self.bar_len*"-"+"\n")
         sys.stdout.flush()
         for s in self.sizes:
@@ -123,7 +123,8 @@ class Benchmark():
         """
         f = open('job_collection', 'w')
         for script in self.script_list:
-            f.write(script + '\n')
+            path = os.path.split(script)
+            f.write('cd %s \nqsub %s \n' % path)
         f.close()
         return 0
 

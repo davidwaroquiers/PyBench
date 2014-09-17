@@ -49,11 +49,9 @@
       <file leaf-file-name="data.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PyBench/core/data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44126076" vertical-offset="731" max-vertical-offset="1320">
-              <caret line="59" column="30" selection-start-line="59" selection-start-column="30" selection-end-line="59" selection-end-column="30" />
-              <folding>
-                <element signature="e#0#47#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.64469916" vertical-offset="0" max-vertical-offset="1320">
+              <caret line="15" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -594,7 +592,11 @@
       <created>1410967640024</created>
       <updated>1410967640024</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="vasp output parsing">
+      <created>1410968906076</created>
+      <updated>1410968906076</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -643,7 +645,8 @@
     <MESSAGE value="job_collection" />
     <MESSAGE value="intermediate vasp input set" />
     <MESSAGE value="vasp output parcing" />
-    <option name="LAST_COMMIT_MESSAGE" value="vasp output parcing" />
+    <MESSAGE value="vasp output parsing" />
+    <option name="LAST_COMMIT_MESSAGE" value="vasp output parsing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1015,11 +1018,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PyBench/core/data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44126076" vertical-offset="731" max-vertical-offset="1320">
-          <caret line="59" column="30" selection-start-line="59" selection-start-column="30" selection-end-line="59" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.64469916" vertical-offset="0" max-vertical-offset="1320">
+          <caret line="15" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

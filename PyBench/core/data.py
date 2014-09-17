@@ -1,5 +1,4 @@
 from __future__ import print_function, division
-from io.vaspio.vasp_output import Outcar
 
 __author__ = 'setten'
 __version__ = "0.1"
@@ -12,6 +11,7 @@ import os
 from abc import ABCMeta, abstractmethod
 from PyBench.core.descriptions import BaseDescription, get_description
 from pymatgen.io.vaspio.vasp_output import Vasprun
+from pymatgen.io.vaspio.vasp_output import Outcar
 
 
 class BaseDataSet(object):

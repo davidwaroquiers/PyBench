@@ -17,7 +17,7 @@ from pymatgen.matproj.rest import MPRester, MPRestError
 from pymatgen.io.vaspio_set import MPStaticVaspInputSet
 from pymatgen.transformations.standard_transformations import SupercellTransformation
 from pymatgen.io.abinitio.tasks import TaskManager
-from Pymatgen.io.vaspio.vasp_input import Poscar
+from pymatgen.io.vaspio.vasp_input import Poscar
 
 #def npar(parameter, n):
 #    return int(n ** parameter)

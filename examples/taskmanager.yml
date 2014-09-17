@@ -1,0 +1,51 @@
+qtype: pbs
+mpi_runner: mpirun
+policy:
+    autoparal: 0
+qparams:
+    queue: main
+    #queue: large
+    #model: ivybridge
+    #model: ivy
+    #place: excl
+    walltime: |
+        24:00:00
+    group_list: naps
+    #pvmem: 8000
+    #vmem: 8000
+    pvmem: 1900
+    vmem: 1900
+    #select: 24
+    select: 96
+    #select: 32
+    #select: 72
+    #select: 96
+    #select: 120
+    #select: 133
+    #select: 256
+    ompthreads: 1
+mpi_runner: mpirun
+shell_env:
+     PATH: /home/acad/ucl/naps/mgiantom/bzr_repos/793/gmatteo-private/build_impi/src/98_main:$PATH
+modules:
+    - compiler/intel/composerxe/2013_sp1.1.106
+    - intelmpi
+    - python/2.7
+# pre_run is a string in verbatim mode (note |)
+pre_run: |
+    echo "------------------ Work dir --------------------"
+    echo $PBS_O_WORKDIR
+    cd ${PBS_O_WORKDIR}
+    echo "------------------ Job Info --------------------"
+    echo "jobid      : $PBS_JOBID"
+    echo "jobname    : $PBS_JOBNAME"
+    echo "job type   : $PBS_ENVIRONMENT"
+    echo "submit dir : $PBS_O_WORKDIR"
+    echo "exec dir   : $PBS_JOBDIR"
+    echo "queue      : $PBS_O_QUEUE"
+    echo "user       : $PBS_O_LOGNAME"
+    echo "threads    : $OMP_NUM_THREADS"
+    echo "------------------ $PBS_NODEFILE ---------------"
+    cat $PBS_NODEFILE
+    echo "------------------ Checking limits -------------"
+    echo "------------- Loading environment --------------"

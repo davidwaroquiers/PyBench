@@ -1,4 +1,10 @@
+from __future__ import print_function, division
+
 __author__ = 'setten'
+__version__ = "0.1"
+__maintainer__ = "Michiel van Setten"
+__email__ = "mjvansetten@gmail.com"
+__date__ = "Sept 2014"
 
 import copy
 from abc import ABCMeta, abstractmethod

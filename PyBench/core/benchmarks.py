@@ -1,4 +1,10 @@
+from __future__ import print_function, division
+
 __author__ = 'setten'
+__version__ = "0.1"
+__maintainer__ = "Michiel van Setten"
+__email__ = "mjvansetten@gmail.com"
+__date__ = "Sept 2014"
 
 """
 PyBench is a package to automatically run a series of bechmarktests of an abinitio code
@@ -10,7 +16,6 @@ import sys
 from pymatgen.matproj.rest import MPRester, MPRestError
 from pymatgen.io.vaspio_set import MPStaticVaspInputSet
 from pymatgen.transformations.standard_transformations import SupercellTransformation
-from pymatgen.io.abinitio.qadapters import qadapter_class, AbstractQueueAdapter
 from pymatgen.io.abinitio.tasks import TaskManager
 
 
@@ -35,15 +40,21 @@ class Benchmark():
     """
     describing a benchmark
     """
-    def __init__(self, code='vasp', system_id='mp-149', scheduler='pbs', **kwargs):
+    def __init__(self, code='vasp', system_id='mp-149', **kwargs):
         """
-        system_id is to be a mp-id to take a base stucture from the mp-database
-        kwarg can be used to personallize all lists
+        system_id is to be a mp-id to take a base structure from the mp-database
+        kwarg can be used to personalize all lists
+
+        code specifies the name of the code to be tested, it is assumed that an executable with this name is
+        present in the current work dir
+
+        to generate the job scripts a taskmanager.yml file is needed in the current work dir
+        #todo add example
+
         list of paralelizaions
         """
         self.code = code
         self.subject = os.path.join(os.getcwd(), code)
-        self.qadapter = qadapter_class(scheduler)()
         self.manager = TaskManager.from_user_config()
         self.script_list = []
         self.system_id = system_id
@@ -68,9 +79,9 @@ class Benchmark():
         :return 0 on succes
         """
         inpset = MPStaticVaspInputSet()
-        print 'testing executable %s' % self.subject
-        print "creating input for %s system sizes and %s calculations per size:" % \
-              (len(self.sizes), self.total / len(self.sizes))
+        print('testing executable %s\n' % self.subject)
+        print("creating input for %s system sizes and %s calculations per size:\n" %
+              (len(self.sizes), self.total / len(self.sizes)))
         sys.stdout.write(self.total*"-"+"\n")
         sys.stdout.flush()
         for s in self.sizes:

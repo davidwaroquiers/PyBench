@@ -124,7 +124,7 @@ class Benchmark():
         f = open('job_collection', 'w')
         for script in self.script_list:
             path = os.path.split(script)
-            f.write('cd %s \nqsub %s \n' % path)
+            f.write('cd %s \nqsub %s \n cd .. \n' % path)
         f.close()
         return 0
 

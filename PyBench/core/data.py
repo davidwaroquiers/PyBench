@@ -12,6 +12,7 @@ from abc import ABCMeta, abstractmethod
 from PyBench.core.descriptions import BaseDescription, get_description
 from pymatgen.io.vaspio.vasp_output import Vasprun
 from pymatgen.io.vaspio.vasp_output import Outcar
+from xml.etree.cElementTree import ParseError
 
 
 class BaseDataSet(object):
@@ -50,20 +51,24 @@ class VaspData(BaseDataSet):
         self.data = {}
 
     def add_data_entry(self, path):
-        xml = Vasprun(os.path.join(path, "vasprun.xml"))
-        out = Outcar(os.path.join(path, "OUTCAR"))
-        if xml.converged:
-            entry = {
-                "NPAR": xml.parameters.get('NPAR'),
-                'ncpus': None,
-                "final_energy": xml.final_energy,
-                "vasp_version": xml.vasp_version,
-                "generator": xml.generator,
-                "generator_hash": hash(frozenset(xml.generator)),
-                "total_wall_time": out.run_stats}
-            entry_hash = hash((entry['ncpus'], entry['NPAR'], entry['generator_hash']))
-            print(entry)
-            self.data.update({entry_hash: entry})
+        try:
+            xml = Vasprun(os.path.join(path, "vasprun.xml"))
+            out = Outcar(os.path.join(path, "OUTCAR"))
+            if xml.converged:
+                entry = {
+                    "NPAR": xml.parameters.get('NPAR'),
+                    'ncpus': None,
+                    "final_energy": xml.final_energy,
+                    "vasp_version": xml.vasp_version,
+                    "generator": xml.generator,
+                    "generator_hash": hash(frozenset(xml.generator)),
+                    "total_wall_time": out.run_stats}
+                entry_hash = hash((entry['ncpus'], entry['NPAR'], entry['generator_hash']))
+                print(entry)
+                self.data.update({entry_hash: entry})
+        except ParseError:
+            pass
+
 
     def gather_data(self):
         tree = os.walk(".")

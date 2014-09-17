@@ -49,8 +49,8 @@
       <file leaf-file-name="data.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PyBench/core/data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.35530087" vertical-offset="686" max-vertical-offset="1335">
-              <caret line="54" column="8" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.31232092" vertical-offset="761" max-vertical-offset="1410">
+              <caret line="58" column="55" selection-start-line="58" selection-start-column="55" selection-end-line="58" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -119,8 +119,8 @@
       <file leaf-file-name="vasp_output.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../pymatgen/pymatgen/io/vaspio/vasp_output.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="185.6923" vertical-offset="18583" max-vertical-offset="30375">
-              <caret line="919" column="8" selection-start-line="919" selection-start-column="8" selection-end-line="919" selection-end-column="8" />
+            <state vertical-scroll-proportion="-6.423077" vertical-offset="208" max-vertical-offset="30375">
+              <caret line="27" column="34" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -600,7 +600,11 @@
       <created>1410969008972</created>
       <updated>1410969008972</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="vasp output parsing">
+      <created>1410969653117</created>
+      <updated>1410969653117</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1014,16 +1018,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../pymatgen/pymatgen/io/vaspio/vasp_output.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="185.6923" vertical-offset="18583" max-vertical-offset="30375">
-          <caret line="919" column="8" selection-start-line="919" selection-start-column="8" selection-end-line="919" selection-end-column="8" />
+        <state vertical-scroll-proportion="-6.423077" vertical-offset="208" max-vertical-offset="30375">
+          <caret line="27" column="34" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PyBench/core/data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35530087" vertical-offset="686" max-vertical-offset="1335">
-          <caret line="54" column="8" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.31232092" vertical-offset="761" max-vertical-offset="1410">
+          <caret line="58" column="55" selection-start-line="58" selection-start-column="55" selection-end-line="58" selection-end-column="55" />
           <folding />
         </state>
       </provider>

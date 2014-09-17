@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8d378ed-ac42-4e6b-859e-45bb3953a31f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PyBench/core/data.py" afterPath="$PROJECT_DIR$/PyBench/core/data.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../pymatgen/pymatgen/io/vaspio/vasp_output.py" afterPath="$PROJECT_DIR$/../pymatgen/pymatgen/io/vaspio/vasp_output.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -120,8 +119,8 @@
       <file leaf-file-name="vasp_output.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../pymatgen/pymatgen/io/vaspio/vasp_output.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.32507738" vertical-offset="14355" max-vertical-offset="30420">
-              <caret line="966" column="38" selection-start-line="966" selection-start-column="38" selection-end-line="966" selection-end-column="38" />
+            <state vertical-scroll-proportion="0.55727553" vertical-offset="14310" max-vertical-offset="30420">
+              <caret line="968" column="31" selection-start-line="968" selection-start-column="31" selection-end-line="968" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -614,7 +613,11 @@
       <created>1410970290194</created>
       <updated>1410970290194</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="vasp output parsing">
+      <created>1410971665558</created>
+      <updated>1410971665558</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1036,8 +1039,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../pymatgen/pymatgen/io/vaspio/vasp_output.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32507738" vertical-offset="14355" max-vertical-offset="30420">
-          <caret line="966" column="38" selection-start-line="966" selection-start-column="38" selection-end-line="966" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.55727553" vertical-offset="14310" max-vertical-offset="30420">
+          <caret line="968" column="31" selection-start-line="968" selection-start-column="31" selection-end-line="968" selection-end-column="31" />
           <folding />
         </state>
       </provider>

@@ -119,8 +119,8 @@
       <file leaf-file-name="vasp_output.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../pymatgen/pymatgen/io/vaspio/vasp_output.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.55727553" vertical-offset="14310" max-vertical-offset="30420">
-              <caret line="968" column="31" selection-start-line="968" selection-start-column="31" selection-end-line="968" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.6749226" vertical-offset="14707" max-vertical-offset="30510">
+              <caret line="997" column="38" selection-start-line="997" selection-start-column="38" selection-end-line="997" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -617,7 +617,11 @@
       <created>1410971665558</created>
       <updated>1410971665558</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="vasp output parsing">
+      <created>1410971857822</created>
+      <updated>1410971857822</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1039,8 +1043,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../pymatgen/pymatgen/io/vaspio/vasp_output.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55727553" vertical-offset="14310" max-vertical-offset="30420">
-          <caret line="968" column="31" selection-start-line="968" selection-start-column="31" selection-end-line="968" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.6749226" vertical-offset="14707" max-vertical-offset="30510">
+          <caret line="997" column="38" selection-start-line="997" selection-start-column="38" selection-end-line="997" selection-end-column="38" />
           <folding />
         </state>
       </provider>

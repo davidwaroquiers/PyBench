@@ -69,7 +69,6 @@ class VaspData(BaseDataSet):
         except (ParseError, ValueError):
             pass
 
-
     def gather_data(self):
         tree = os.walk(".")
         for dirs in tree:

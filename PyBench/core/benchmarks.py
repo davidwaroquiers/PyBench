@@ -95,9 +95,7 @@ class Benchmark():
             sys.stdout.flush()
             struc = copy.deepcopy(self.structure)
             trans = SupercellTransformation.from_scaling_factors(scale_a=s, scale_b=s, scale_c=s)
-            print(trans._matrix)
             struc = trans.apply_transformation(struc)
-            print("volume:", struc.volume)
             for n in self.np_list:
                 for x in self.parameter_lists:
                     for o in self.parameter_lists[x]:

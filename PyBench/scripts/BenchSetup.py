@@ -21,3 +21,4 @@ if __name__ == "__main__":
     desc.print_template()
     bench = get_benchmark(code=code)
     bench.create_input()
+    bench.create_job_collection()

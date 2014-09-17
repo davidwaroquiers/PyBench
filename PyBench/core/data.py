@@ -28,11 +28,10 @@ class BaseDataSet(object):
         self.data = {}
 
     @abstractmethod
-    def get_data(self, path):
+    def gather_data(self):
         """
         read the data from path
         """
-        # read the calculation info file
         # read the calculation results
 
     def insert_in_db(self):

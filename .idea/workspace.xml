@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8d378ed-ac42-4e6b-859e-45bb3953a31f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PyBench/scripts/BenchOutput.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PyBench/core/benchmarks.py" afterPath="$PROJECT_DIR$/PyBench/core/benchmarks.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PyBench/core/data.py" afterPath="$PROJECT_DIR$/PyBench/core/data.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -50,20 +46,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="data.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="data.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PyBench/core/data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="834" max-vertical-offset="1230">
-              <caret line="72" column="16" selection-start-line="72" selection-start-column="16" selection-end-line="72" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.3008596" vertical-offset="780" max-vertical-offset="1260">
+              <caret line="59" column="37" selection-start-line="59" selection-start-column="37" selection-end-line="59" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BenchOutput.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="BenchOutput.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PyBench/scripts/BenchOutput.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.82905984" vertical-offset="39" max-vertical-offset="420">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
               <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding />
             </state>
@@ -153,8 +149,8 @@
         <option value="$PROJECT_DIR$/PyBench/core/descriptions.py" />
         <option value="$PROJECT_DIR$/PyBench/scripts/BenchSetup.py" />
         <option value="$PROJECT_DIR$/PyBench/core/benchmarks.py" />
-        <option value="$PROJECT_DIR$/PyBench/core/data.py" />
         <option value="$PROJECT_DIR$/PyBench/scripts/BenchOutput.py" />
+        <option value="$PROJECT_DIR$/PyBench/core/data.py" />
       </list>
     </option>
   </component>
@@ -584,17 +580,26 @@
       <created>1410964124314</created>
       <updated>1410964124314</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="vasp output parcing">
+      <created>1410967231047</created>
+      <updated>1410967231048</updated>
+    </task>
+    <task id="LOCAL-00012" summary="vasp output parcing">
+      <created>1410967395477</created>
+      <updated>1410967395477</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="22" width="1256" height="715" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32888147" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32998326" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24939272" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22186235" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -605,7 +610,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -632,7 +636,8 @@
     <MESSAGE value="visual bug fix" />
     <MESSAGE value="job_collection" />
     <MESSAGE value="intermediate vasp input set" />
-    <option name="LAST_COMMIT_MESSAGE" value="intermediate vasp input set" />
+    <MESSAGE value="vasp output parcing" />
+    <option name="LAST_COMMIT_MESSAGE" value="vasp output parcing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -994,18 +999,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PyBench/core/data.py">
+    <entry file="file://$PROJECT_DIR$/PyBench/scripts/BenchOutput.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="834" max-vertical-offset="1230">
-          <caret line="72" column="16" selection-start-line="72" selection-start-column="16" selection-end-line="72" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PyBench/scripts/BenchOutput.py">
+    <entry file="file://$PROJECT_DIR$/PyBench/core/data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.82905984" vertical-offset="39" max-vertical-offset="420">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.3008596" vertical-offset="780" max-vertical-offset="1260">
+          <caret line="59" column="37" selection-start-line="59" selection-start-column="37" selection-end-line="59" selection-end-column="37" />
           <folding />
         </state>
       </provider>

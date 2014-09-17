@@ -56,6 +56,8 @@ class VaspData(BaseDataSet):
                 "NPAR": data.parameters.get('NPAR'),
                 "final_energy": data.final_energy,
                 "vasp_version": data.vasp_version}
+
+        print(data.parameters.keys())
         print(entry)
 
     def gather_data(self):
@@ -63,6 +65,7 @@ class VaspData(BaseDataSet):
         for dirs in tree:
             data_file = os.path.join(dirs[0], 'vasprun.xml')
             if os.path.isfile(data_file):
+                print(data_file)
                 self.add_data_entry(data_file)
 
 

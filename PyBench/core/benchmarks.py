@@ -80,8 +80,8 @@ class Benchmark():
         :return 0 on succes
         """
         inpset = MPStaticVaspInputSet()
-        print('testing executable %s\n' % self.subject)
-        print("creating input for %s system sizes and %s calculations per size:\n" %
+        print('testing executable %s' % self.subject)
+        print("creating input for %s system sizes and %s calculations per size:" %
               (len(self.sizes), int(self.total / len(self.sizes))))
         sys.stdout.write(self.bar_len*"-"+"\n")
         sys.stdout.flush()

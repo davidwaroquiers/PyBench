@@ -49,8 +49,8 @@
       <file leaf-file-name="data.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PyBench/core/data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.64469916" vertical-offset="0" max-vertical-offset="1320">
-              <caret line="15" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.35530087" vertical-offset="686" max-vertical-offset="1335">
+              <caret line="54" column="8" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -596,7 +596,11 @@
       <created>1410968906076</created>
       <updated>1410968906076</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="vasp output parsing">
+      <created>1410969008972</created>
+      <updated>1410969008972</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1018,8 +1022,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PyBench/core/data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.64469916" vertical-offset="0" max-vertical-offset="1320">
-          <caret line="15" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.35530087" vertical-offset="686" max-vertical-offset="1335">
+          <caret line="54" column="8" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="8" />
           <folding />
         </state>
       </provider>

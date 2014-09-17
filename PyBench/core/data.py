@@ -26,7 +26,6 @@ class BaseDataSet(object):
         data will contain the actual data
         """
         self.description = BaseDescription
-        self.data = {}
 
     @abstractmethod
     def gather_data(self):
@@ -48,11 +47,11 @@ class VaspData(BaseDataSet):
         self.code = 'vasp'
         super(BaseDataSet, self).__init__()
         self.description = get_description(self.code)
+        self.data = {}
 
     def add_data_entry(self, path):
         xml = Vasprun(os.path.join(path, "vasprun.xml"))
         out = Outcar(os.path.join(path, "OUTCAR"))
-        entry = {}
         if xml.converged:
             entry = {
                 "NPAR": xml.parameters.get('NPAR'),
@@ -60,9 +59,11 @@ class VaspData(BaseDataSet):
                 "final_energy": xml.final_energy,
                 "vasp_version": xml.vasp_version,
                 "generator": xml.generator,
+                "generator_hash": hash(frozenset(xml.generator)),
                 "total_wall_time": out.run_stats}
-        print(entry)
-        self.data.update(entry)
+            entry_hash = hash((entry['ncpus'], entry['NPAR'], entry['generator_hash']))
+            print(entry)
+            self.data.update({entry_hash: entry})
 
     def gather_data(self):
         tree = os.walk(".")

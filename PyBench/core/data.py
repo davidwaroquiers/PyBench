@@ -66,7 +66,7 @@ class VaspData(BaseDataSet):
                 entry_hash = hash((entry['ncpus'], entry['NPAR'], entry['generator_hash']))
                 print(entry)
                 self.data.update({entry_hash: entry})
-        except ParseError:
+        except (ParseError, ValueError):
             pass
 
 

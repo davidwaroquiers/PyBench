@@ -57,7 +57,7 @@ class VaspData(BaseDataSet):
             if xml.converged:
                 entry = {
                     "NPAR": xml.parameters.get('NPAR'),
-                    'ncpus': None,
+                    'ncpus': out.run_stats['cores'],
                     "final_energy": xml.final_energy,
                     "vasp_version": xml.vasp_version,
                     "generator": xml.generator,

@@ -17,7 +17,7 @@ from pymatgen.matproj.rest import MPRester, MPRestError
 from pymatgen.io.vaspio_set import MPStaticVaspInputSet
 from pymatgen.transformations.standard_transformations import SupercellTransformation
 from pymatgen.io.abinitio.tasks import TaskManager
-
+from Pymatgen.io.vaspio.vasp_input import Poscar
 
 #def npar(parameter, n):
 #    return int(n ** parameter)
@@ -34,6 +34,11 @@ def functions(function_type):
         return int(n ** parameter)
     l = {'NPAR': npar}
     return l[function_type]
+
+
+class BenchVaspInputSet(MPStaticVaspInputSet):
+        def get_poscar(self, structure):
+            return Poscar(structure)
 
 
 class Benchmark():
@@ -79,7 +84,7 @@ class Benchmark():
 
         :return 0 on succes
         """
-        inpset = MPStaticVaspInputSet()
+        inpset = BenchVaspInputSet()
         print('testing executable %s' % self.subject)
         print("creating input for %s system sizes and %s calculations per size:" %
               (len(self.sizes), int(self.total / len(self.sizes))))
@@ -89,8 +94,10 @@ class Benchmark():
             sys.stdout.write("|")
             sys.stdout.flush()
             struc = copy.deepcopy(self.structure)
-            trans = SupercellTransformation.from_scaling_factors(s, s, s)
+            trans = SupercellTransformation.from_scaling_factors(scale_a=s, scale_b=s, scale_c=s)
+            print(trans._matrix)
             struc = trans.apply_transformation(struc)
+            print("volume:", struc.volume)
             for n in self.np_list:
                 for x in self.parameter_lists:
                     for o in self.parameter_lists[x]:

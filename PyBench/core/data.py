@@ -1,4 +1,5 @@
 from __future__ import print_function, division
+from io.vaspio.vasp_output import Outcar
 
 __author__ = 'setten'
 __version__ = "0.1"
@@ -49,16 +50,19 @@ class VaspData(BaseDataSet):
         self.description = get_description(self.code)
 
     def add_data_entry(self, path):
-        data = Vasprun(path)
+        xml = Vasprun(os.path.join(path, "vasprun.xml"))
+        out = Outcar(os.path.join(path, "OUTCAR"))
         entry = {}
-        if data.converged:
+        if xml.converged:
             entry = {
-                "NPAR": data.parameters.get('NPAR'),
-                "final_energy": data.final_energy,
-                "vasp_version": data.vasp_version}
-
-        print(data.parameters.keys())
+                "NPAR": xml.parameters.get('NPAR'),
+                'ncpus': None,
+                "final_energy": xml.final_energy,
+                "vasp_version": xml.vasp_version,
+                "generator": xml.generator,
+                "total_wall_time": out.run_stats}
         print(entry)
+        self.data.update(entry)
 
     def gather_data(self):
         tree = os.walk(".")
@@ -66,7 +70,7 @@ class VaspData(BaseDataSet):
             data_file = os.path.join(dirs[0], 'vasprun.xml')
             if os.path.isfile(data_file):
                 print(data_file)
-                self.add_data_entry(data_file)
+                self.add_data_entry(dirs[0])
 
 
 def get_data_set(code):

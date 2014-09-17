@@ -70,7 +70,8 @@ class Benchmark():
         xx = 0
         for parameter in self.parameter_lists:
             xx += len(self.parameter_lists[parameter])
-        self.total = len(self.sizes) + 1 + len(self.np_list)*len(self.sizes)*xx
+        self.total = len(self.np_list)*len(self.sizes)*xx
+        self.bar_len = len(self.sizes) + 1 + self.total
 
     def create_input(self):
         """
@@ -82,7 +83,7 @@ class Benchmark():
         print('testing executable %s\n' % self.subject)
         print("creating input for %s system sizes and %s calculations per size:\n" %
               (len(self.sizes), self.total / len(self.sizes)))
-        sys.stdout.write(self.total*"-"+"\n")
+        sys.stdout.write(self.bar_len*"-"+"\n")
         sys.stdout.flush()
         for s in self.sizes:
             sys.stdout.write("|")

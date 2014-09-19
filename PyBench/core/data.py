@@ -85,10 +85,11 @@ class BaseDataSet(object):
         print("NCPUS:\n%s\n" % self.ncpus)
 
     def print_parameter_lists(self):
-        for entry in self.data:
+        for entry in self.data.values():
             if entry["ncpus"] not in self.ncpus:
                 self.ncpus.append(entry["ncpus"])
         self.ncpus.sort()
+
 
 class VaspData(BaseDataSet):
     """

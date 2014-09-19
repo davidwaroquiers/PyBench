@@ -105,14 +105,6 @@ class VaspDescription(BaseDescription):
         return True
 
 
-class NullDescription(BaseDescription):
-    """
-    for coding purposes
-    """
-    def complete_template(self):
-        self.template = copy.deepcopy(self._base_template)
-        return True
-
 def get_description(code):
     """
     factory function

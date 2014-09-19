@@ -10,8 +10,8 @@ import copy
 import os
 import pymongo
 import gridfs
-from abc import ABCMeta, abstractmethod
-from PyBench.core.descriptions import NullDescription, get_description
+from abc import ABCMeta, abstractmethod, abstractproperty
+from PyBench.core.descriptions import get_description
 from pymatgen.io.vaspio.vasp_output import Vasprun
 from pymatgen.io.vaspio.vasp_output import Outcar
 from xml.etree.cElementTree import ParseError
@@ -67,7 +67,11 @@ class BaseDataSet(object):
         description will contain the description of the cluster and code version and compilation
         data will contain the actual data
         """
-        self.description = NullDescription()
+        self.description = get_description(self.code)
+        if not self.description.read_from_file():
+            print('desctipion found, create it from template please:')
+            if not self.description.create_interactively_from_template():
+                raise RuntimeError
         self.data = {}
         try:
             self.col = get_collection()
@@ -75,6 +79,13 @@ class BaseDataSet(object):
             print("pymongo operation failure, no DB support")
         self.ncpus = []
         self.gh = []
+        self.data = {}
+
+    @abstractproperty
+    def code(self):
+        """
+        the code for the concrete data set
+        """
 
     @abstractmethod
     def gather_data(self):
@@ -86,7 +97,7 @@ class BaseDataSet(object):
     def insert_in_db(self):
         entry = copy.deepcopy(self.description.description)
         entry['desc_hash'] = hash(self.description)
-        entry.update(self.data)
+        entry['data'] = self.data
         pprint.pprint(entry)
         #self.col.save(entry)
 
@@ -108,11 +119,9 @@ class VaspData(BaseDataSet):
     """
     object for vasp benchmark data
     """
-    def __init__(self):
-        self.code = 'vasp'
-        super(VaspData, self).__init__()
-        self.description = get_description(self.code)
-        self.data = {}
+    @property
+    def code(self):
+        return 'vasp'
 
     def add_data_entry(self, path):
         try:
@@ -126,7 +135,7 @@ class VaspData(BaseDataSet):
                     "vasp_version": xml.vasp_version,
                     "generator": xml.generator,
                     "generator_hash": hash(frozenset(xml.generator)),
-                    "total_wall_time": out.run_stats}
+                    "run_stats": out.run_stats}
                 entry_hash = hash((entry['ncpus'], entry['NPAR'], entry['generator_hash']))
                 log(entry)
                 self.data.update({entry_hash: entry})

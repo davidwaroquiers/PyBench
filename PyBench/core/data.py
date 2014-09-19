@@ -15,7 +15,8 @@ from PyBench.core.descriptions import BaseDescription, get_description
 from pymatgen.io.vaspio.vasp_output import Vasprun
 from pymatgen.io.vaspio.vasp_output import Outcar
 from xml.etree.cElementTree import ParseError
-
+from pymongo.errors import OperationFailure
+from pymongo import Connection
 
 def get_collection(server="marilyn.pcpm.ucl.ac.be", db_name="Bencmark_results", collection="vasp", with_gfs=False):
     """
@@ -32,7 +33,7 @@ def get_collection(server="marilyn.pcpm.ucl.ac.be", db_name="Bencmark_results", 
 
     :return:
     """
-    local_serv = pymongo.Connection(server)
+    local_serv = Connection(server)
     try:
         user = os.environ['MAR_USER']
     except KeyError:
@@ -62,7 +63,10 @@ class BaseDataSet(object):
         """
         self.description = BaseDescription
         self.data = {}
-        self.col = get_collection()
+        try:
+            self.col = get_collection()
+        except OperationFailure:
+            print("pymongo operation failure, no DB support")
         self.ncpus = []
 
     @abstractmethod

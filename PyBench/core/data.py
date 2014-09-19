@@ -8,11 +8,45 @@ __date__ = "Sept 2014"
 
 import copy
 import os
+import pymongo
+import gridfs
 from abc import ABCMeta, abstractmethod
 from PyBench.core.descriptions import BaseDescription, get_description
 from pymatgen.io.vaspio.vasp_output import Vasprun
 from pymatgen.io.vaspio.vasp_output import Outcar
 from xml.etree.cElementTree import ParseError
+
+
+def get_collection(server="marilyn.pcpm.ucl.ac.be", db_name="Bencmark_results", collection="vasp", with_gfs=False):
+    """
+    Add the actual pymongo collection object as self.col
+
+    :param server:
+    name of the server
+
+    :param db_name:
+    name of the data_base
+
+    :param collection:
+    name of the collection
+
+    :return:
+    """
+    local_serv = pymongo.Connection(server)
+    try:
+        user = os.environ['MAR_USER']
+    except KeyError:
+        user = input('DataBase user name: ')
+    try:
+        pwd = os.environ['MAR_PAS']
+    except KeyError:
+        pwd = input('DataBase pwd: ')
+    db = local_serv[db_name]
+    db.authenticate(user, pwd)
+    if with_gfs:
+        return db[collection], gridfs.GridFS(db)
+    else:
+        return db[collection]
 
 
 class BaseDataSet(object):
@@ -27,6 +61,8 @@ class BaseDataSet(object):
         data will contain the actual data
         """
         self.description = BaseDescription
+        self.data = {}
+        self.col = get_collection()
 
     @abstractmethod
     def gather_data(self):
@@ -38,6 +74,7 @@ class BaseDataSet(object):
     def insert_in_db(self):
         entry = copy.deepcopy(self.description)
         entry.update(self.data)
+        self.col.save(entry)
 
 
 class VaspData(BaseDataSet):

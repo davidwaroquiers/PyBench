@@ -20,3 +20,4 @@ if __name__ == "__main__":
     desc = get_description(code=code)
     data_set = get_data_set(code=code)
     data_set.gather_data()
+    data_set.insert_in_db()

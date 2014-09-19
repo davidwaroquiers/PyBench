@@ -22,4 +22,4 @@ if __name__ == "__main__":
     data_set.gather_data()
     data_set.set_parameter_lists()
     data_set.print_parameter_lists()
-    #data_set.insert_in_db()
+    data_set.insert_in_db()

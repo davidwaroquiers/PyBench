@@ -70,6 +70,7 @@ class BaseDataSet(object):
         except pymongo.errors.OperationFailure:
             print("pymongo operation failure, no DB support")
         self.ncpus = []
+        self.gh = []
 
     @abstractmethod
     def gather_data(self):
@@ -87,13 +88,14 @@ class BaseDataSet(object):
 
     def print_parameter_lists(self):
         print("NCPUS:\n%s\n" % self.ncpus)
+        print("Generator Hashes:\n%s\n" % self.gh)
 
     def set_parameter_lists(self):
         for entry in self.data.values():
             if entry["ncpus"] not in self.ncpus:
                 self.ncpus.append(entry["ncpus"])
-            if entry["generator_hash"] not in self.ncpus:
-                self.ncpus.append(entry["ncpus"])
+            if entry["generator_hash"] not in self.gh:
+                self.gh.append(entry["generator_hash"])
 
         self.ncpus.sort()
 

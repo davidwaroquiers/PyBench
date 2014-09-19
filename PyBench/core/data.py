@@ -17,6 +17,8 @@ from pymatgen.io.vaspio.vasp_output import Outcar
 from xml.etree.cElementTree import ParseError
 from pymongo.errors import OperationFailure
 from pymongo import Connection
+import pprint
+
 
 def get_collection(server="marilyn.pcpm.ucl.ac.be", db_name="Bencmark_results", collection="vasp", with_gfs=False):
     """
@@ -78,8 +80,10 @@ class BaseDataSet(object):
 
     def insert_in_db(self):
         entry = copy.deepcopy(self.description)
+        entry['desc_hash'] = hash(frozenset(entry))
         entry.update(self.data)
-        self.col.save(entry)
+        pprint.pprint(entry)
+        #self.col.save(entry)
 
     def print_parameter_lists(self):
         print("NCPUS:\n%s\n" % self.ncpus)
@@ -88,6 +92,9 @@ class BaseDataSet(object):
         for entry in self.data.values():
             if entry["ncpus"] not in self.ncpus:
                 self.ncpus.append(entry["ncpus"])
+            if entry["generator_hash"] not in self.ncpus:
+                self.ncpus.append(entry["ncpus"])
+
         self.ncpus.sort()
 
 

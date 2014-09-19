@@ -11,7 +11,7 @@ import os
 import pymongo
 import gridfs
 from abc import ABCMeta, abstractmethod
-from PyBench.core.descriptions import BaseDescription, get_description
+from PyBench.core.descriptions import NullDescription, get_description
 from pymatgen.io.vaspio.vasp_output import Vasprun
 from pymatgen.io.vaspio.vasp_output import Outcar
 from xml.etree.cElementTree import ParseError
@@ -67,7 +67,7 @@ class BaseDataSet(object):
         description will contain the description of the cluster and code version and compilation
         data will contain the actual data
         """
-        self.description = BaseDescription()
+        self.description = NullDescription()
         self.data = {}
         try:
             self.col = get_collection()

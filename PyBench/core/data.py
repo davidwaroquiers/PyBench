@@ -63,7 +63,7 @@ class BaseDataSet(object):
         description will contain the description of the cluster and code version and compilation
         data will contain the actual data
         """
-        self.description = BaseDescription
+        self.description = BaseDescription()
         self.data = {}
         try:
             self.col = get_collection()
@@ -80,8 +80,8 @@ class BaseDataSet(object):
         # read the calculation results
 
     def insert_in_db(self):
-        entry = copy.deepcopy(self.description)
-        entry['desc_hash'] = hash(frozenset(entry))
+        entry = copy.deepcopy(self.description.description)
+        entry['desc_hash'] = hash(self.description)
         entry.update(self.data)
         pprint.pprint(entry)
         #self.col.save(entry)

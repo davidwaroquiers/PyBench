@@ -34,6 +34,9 @@ class BaseDescription(object):
         self.description = {}
         self.complete_template()
 
+    def __hash__(self):
+        return hash(frozenset(self.description))
+
     @abstractmethod
     def complete_template(self):
         """

@@ -63,6 +63,7 @@ class BaseDataSet(object):
         self.description = BaseDescription
         self.data = {}
         self.col = get_collection()
+        self.ncpus = []
 
     @abstractmethod
     def gather_data(self):
@@ -76,6 +77,14 @@ class BaseDataSet(object):
         entry.update(self.data)
         self.col.save(entry)
 
+    def set_parameter_lists(self):
+        print("NCPUS:\n%s\n" % self.ncpus)
+
+    def print_parameter_lists(self):
+        for entry in self.data:
+            if entry["ncpus"] not in self.ncpus:
+                self.ncpus.append(entry["ncpus"])
+        self.ncpus.sort()
 
 class VaspData(BaseDataSet):
     """
@@ -83,7 +92,7 @@ class VaspData(BaseDataSet):
     """
     def __init__(self):
         self.code = 'vasp'
-        super(BaseDataSet, self).__init__()
+        super(VaspData, self).__init__()
         self.description = get_description(self.code)
         self.data = {}
 

@@ -65,7 +65,7 @@ class BaseDataSet(object):
         self.data = {}
         try:
             self.col = get_collection()
-        except OperationFailure:
+        except pymongo.errors.OperationFailure:
             print("pymongo operation failure, no DB support")
         self.ncpus = []
 

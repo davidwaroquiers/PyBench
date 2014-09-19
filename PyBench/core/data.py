@@ -20,6 +20,10 @@ from pymongo import Connection
 import pprint
 
 
+def log(a):
+    pass
+
+
 def get_collection(server="marilyn.pcpm.ucl.ac.be", db_name="Bencmark_results", collection="vasp", with_gfs=False):
     """
     Add the actual pymongo collection object as self.col
@@ -124,7 +128,7 @@ class VaspData(BaseDataSet):
                     "generator_hash": hash(frozenset(xml.generator)),
                     "total_wall_time": out.run_stats}
                 entry_hash = hash((entry['ncpus'], entry['NPAR'], entry['generator_hash']))
-                print(entry)
+                log(entry)
                 self.data.update({entry_hash: entry})
         except (ParseError, ValueError):
             pass

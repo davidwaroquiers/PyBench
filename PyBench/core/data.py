@@ -81,10 +81,10 @@ class BaseDataSet(object):
         entry.update(self.data)
         self.col.save(entry)
 
-    def set_parameter_lists(self):
+    def print_parameter_lists(self):
         print("NCPUS:\n%s\n" % self.ncpus)
 
-    def print_parameter_lists(self):
+    def set_parameter_lists(self):
         for entry in self.data.values():
             if entry["ncpus"] not in self.ncpus:
                 self.ncpus.append(entry["ncpus"])

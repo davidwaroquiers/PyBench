@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8d378ed-ac42-4e6b-859e-45bb3953a31f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PyBench/scripts/BenchOutput.py" afterPath="$PROJECT_DIR$/PyBench/scripts/BenchOutput.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PyBench/core/benchmarks.py" afterPath="$PROJECT_DIR$/PyBench/core/benchmarks.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PyBench/core/data.py" afterPath="$PROJECT_DIR$/PyBench/core/data.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PyBench/core/descriptions.py" afterPath="$PROJECT_DIR$/PyBench/core/descriptions.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="PyBench.iws" />
@@ -32,7 +31,7 @@
         <entry file="file://$PROJECT_DIR$/../GWplotting/GWplotting/collection.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="358" max-vertical-offset="4920">
-              <caret line="57" column="36" selection-start-line="30" selection-start-column="0" selection-end-line="57" selection-end-column="36" />
+              <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -41,8 +40,8 @@
       <file leaf-file-name="benchmarks.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PyBench/core/benchmarks.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1584" max-vertical-offset="2160">
-              <caret line="74" column="14" selection-start-line="74" selection-start-column="14" selection-end-line="74" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2175">
+              <caret line="105" column="80" selection-start-line="105" selection-start-column="80" selection-end-line="105" selection-end-column="80" />
               <folding />
             </state>
           </provider>
@@ -51,18 +50,28 @@
       <file leaf-file-name="datastructures.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../pymatgen/pymatgen/io/gwwrapper/datastructures.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="7577" max-vertical-offset="13755">
-              <caret line="494" column="8" selection-start-line="494" selection-start-column="8" selection-end-line="494" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="7637" max-vertical-offset="13800">
+              <caret line="498" column="8" selection-start-line="498" selection-start-column="8" selection-end-line="498" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="data.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="data.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PyBench/core/data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2490">
-              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state vertical-scroll-proportion="-1.6647564" vertical-offset="1676" max-vertical-offset="3060">
+              <caret line="73" column="65" selection-start-line="73" selection-start-column="65" selection-end-line="73" selection-end-column="65" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="plots.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../GWplotting/GWplotting/plots.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2115" max-vertical-offset="3765">
+              <caret line="200" column="6" selection-start-line="200" selection-start-column="6" selection-end-line="200" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -72,16 +81,16 @@
         <entry file="file://$PROJECT_DIR$/PyBench/scripts/BenchOutput.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
-              <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+              <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="descriptions.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="descriptions.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PyBench/core/descriptions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.912088" vertical-offset="0" max-vertical-offset="1800">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1800">
               <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
               <folding />
             </state>
@@ -91,8 +100,8 @@
       <file leaf-file-name="codeinterfaces.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../pymatgen/pymatgen/io/gwwrapper/codeinterfaces.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="4980" max-vertical-offset="7545">
-              <caret line="332" column="22" selection-start-line="332" selection-start-column="22" selection-end-line="332" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="5010" max-vertical-offset="7560">
+              <caret line="334" column="22" selection-start-line="334" selection-start-column="22" selection-end-line="334" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -111,8 +120,8 @@
       <file leaf-file-name="vasp_output.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../pymatgen/pymatgen/io/vaspio/vasp_output.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="13875" max-vertical-offset="30525">
-              <caret line="927" column="16" selection-start-line="927" selection-start-column="16" selection-end-line="927" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="13530" max-vertical-offset="30780">
+              <caret line="923" column="9" selection-start-line="923" selection-start-column="9" selection-end-line="923" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -126,6 +135,7 @@
     </FindUsagesManager>
   </component>
   <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -139,11 +149,12 @@
         <option value="$PROJECT_DIR$/../pymatgen/pymatgen/core/sites.py" />
         <option value="$PROJECT_DIR$/../PyBench-org/PyBench/core/descriptions.py" />
         <option value="$PROJECT_DIR$/PyBench/scripts/BenchSetup.py" />
-        <option value="$PROJECT_DIR$/PyBench/core/benchmarks.py" />
         <option value="$PROJECT_DIR$/../pymatgen/pymatgen/io/vaspio/vasp_output.py" />
         <option value="$PROJECT_DIR$/PyBench/scripts/BenchOutput.py" />
-        <option value="$PROJECT_DIR$/PyBench/core/data.py" />
         <option value="$PROJECT_DIR$/PyBench/core/descriptions.py" />
+        <option value="$PROJECT_DIR$/PyBench/core/benchmarks.py" />
+        <option value="$PROJECT_DIR$/../GWplotting/GWplotting/collection.py" />
+        <option value="$PROJECT_DIR$/PyBench/core/data.py" />
       </list>
     </option>
   </component>
@@ -356,32 +367,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="GWplotting" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GWplotting" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="collection.py" />
-              <option name="myItemType" value="com.jetbrains.python.projectView.PyFileNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Collection" />
-              <option name="myItemType" value="com.jetbrains.python.projectView.PyElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PyBench" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PyBench" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="PyBench" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -401,68 +386,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="PyBench.egg-info" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PyBench" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PyBench" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PyBench" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PyBench" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PyBench" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PyBench" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PyBench" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PyBench" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PyBench" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PyBench" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PyBench" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PyBench" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -486,6 +409,413 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/PyBench/scripts" />
     </key>
+  </component>
+  <component name="RestoreUpdateTree">
+    <UpdateInfo date="Moments ago" ActionInfo="_Update">
+      <UpdatedFiles>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated from server" />
+          <option name="myStatusName" value="Changed on server" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CHANGED_ON_SERVER" />
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Updated" />
+            <option name="myStatusName" value="Changed" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="UPDATED" />
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/.travis.yml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/CHANGES.rst</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/README.rst</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/circle.yml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/docs/_static/Basic functionality.html</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/docs/_static/Molecule.html</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/docs/change_log.rst</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/docs/contributing.rst</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/docs/index.rst</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/docs/installation.rst</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/docs/latest_changes.rst</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/docs/pymatgen.analysis.pourbaix.rst</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/docs/pymatgen.core.rst</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/docs/pymatgen.io.rst</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/docs/pymatgen.util.rst</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/docs/pymatgen.vis.rst</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/examples/Basic functionality.ipynb</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/examples/Molecule.ipynb</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/fabfile.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/__init__.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/alchemy/filters.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/alchemy/materials.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/alchemy/tests/__init__.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/alchemy/tests/test_filters.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/alchemy/tests/test_materials.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/alchemy/tests/test_transmuters.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/alchemy/transmuters.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/analysis/bond_valence.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/analysis/defects/dilute_solution_model.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/analysis/defects/point_defects.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/analysis/defects/tests/__init__.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/analysis/defects/tests/test_dilute_solution_model.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/analysis/defects/tests/test_point_defects.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/analysis/diffraction/__init__.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/analysis/diffraction/tests/__init__.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/analysis/diffraction/tests/test_xrd.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/analysis/diffraction/xrd.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/analysis/diffusion_analyzer.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/analysis/energy_models.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/analysis/ewald.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/analysis/molecule_matcher.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/analysis/molecule_structure_comparator.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/analysis/pourbaix/analyzer.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/analysis/pourbaix/entry.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/analysis/pourbaix/maker.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/analysis/pourbaix/plotter.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/analysis/pourbaix/tests/__init__.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/analysis/pourbaix/tests/test_analyzer.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/analysis/pourbaix/tests/test_entry.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/analysis/pourbaix/tests/test_maker.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/analysis/reaction_calculator.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/analysis/structure_analyzer.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/analysis/structure_matcher.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/analysis/tests/__init__.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/analysis/tests/test_bond_valence.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/analysis/tests/test_diffusion_analyzer.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/analysis/tests/test_energy_models.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/analysis/tests/test_ewald.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/analysis/tests/test_molecule_matcher.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/analysis/tests/test_molecule_structure_comparator.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/analysis/tests/test_reaction_calculator.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/analysis/tests/test_structure_analyzer.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/analysis/tests/test_structure_matcher.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/analysis/thermochemistry.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/apps/battery/battery_abc.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/apps/battery/conversion_battery.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/apps/battery/insertion_battery.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/apps/battery/plotter.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/apps/battery/tests/test_conversion_battery.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/apps/battery/tests/test_insertion_battery.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/apps/battery/tests/test_plotter.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/apps/borg/hive.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/apps/borg/queen.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/apps/borg/tests/test_hive.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/apps/borg/tests/test_queen.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/command_line/__init__.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/command_line/aconvasp_caller.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/command_line/bader_caller.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/command_line/enumlib_caller.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/command_line/gulp_caller.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/command_line/tests/__init__.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/command_line/tests/test_aconvasp_caller.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/command_line/tests/test_bader_caller.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/command_line/tests/test_enumlib_caller.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/command_line/tests/test_gulp_caller.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/core/__init__.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/core/bonds.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/core/composition.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/core/design_patterns.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/core/ion.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/core/lattice.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/core/operations.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/core/periodic_table.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/core/physical_constants.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/core/sites.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/core/structure.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/core/surface.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/core/tests/__init__.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/core/tests/test_bonds.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/core/tests/test_composition.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/core/tests/test_ion.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/core/tests/test_lattice.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/core/tests/test_operations.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/core/tests/test_periodic_table.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/core/tests/test_sites.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/core/tests/test_structure.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/core/tests/test_units.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/core/units.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/electronic_structure/bandstructure.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/electronic_structure/boltztrap.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/electronic_structure/core.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/electronic_structure/dos.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/electronic_structure/plotter.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/electronic_structure/tests/__init__.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/electronic_structure/tests/test_bandstructure.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/electronic_structure/tests/test_boltztrap.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/electronic_structure/tests/test_core.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/electronic_structure/tests/test_dos.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/electronic_structure/tests/test_plotter.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/entries/__init__.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/entries/compatibility.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/entries/computed_entries.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/entries/entry_tools.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/entries/exp_entries.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/entries/post_processors_abc.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/entries/tests/__init__.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/entries/tests/test_compatibility.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/entries/tests/test_computed_entries.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/entries/tests/test_entry_tools.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/entries/tests/test_exp_entries.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/abinitio/abiinspect.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/abinitio/abiobjects.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/abinitio/abitimer.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/abinitio/calculations.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/abinitio/eos.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/abinitio/events.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/abinitio/flows.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/abinitio/launcher.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/abinitio/netcdf.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/abinitio/pseudos.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/abinitio/qadapters.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/abinitio/strategies.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/abinitio/tasks.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/abinitio/tests/__init__.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/abinitio/tests/test_abiinspect.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/abinitio/tests/test_abiobjects.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/abinitio/tests/test_eos.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/abinitio/tests/test_flows.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/abinitio/tests/test_launcher.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/abinitio/tests/test_netcdf.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/abinitio/tests/test_pseudos.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/abinitio/tests/test_qadapters.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/abinitio/tests/test_tasks.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/abinitio/tests/test_utils.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/abinitio/tests/test_workflow.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/abinitio/utils.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/abinitio/workflows.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/abinitio/wrappers.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/aseio.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/babelio.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/cifio.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/cssrio.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/feffio.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/feffio_set.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/gaussianio.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/gwwrapper/GWtasks.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/gwwrapper/GWvaspinputsets.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/gwwrapper/GWworkflows.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/gwwrapper/__init__.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/gwwrapper/codeinterfaces.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/gwwrapper/convergence.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/gwwrapper/datastructures.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/gwwrapper/helpers.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/gwwrapper/scheduler_error_handlers.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/gwwrapper/scheduler_error_parsers.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/gwwrapper/scripts/GWoutput.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/gwwrapper/scripts/GWprint.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/gwwrapper/scripts/GWsetup.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/gwwrapper/scripts/GWstore.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/gwwrapper/scripts/__init__.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/gwwrapper/scripts/bandstructure_output_script.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/gwwrapper/tests/__init__.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/gwwrapper/tests/check_times.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/gwwrapper/tests/test_helpers.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/gwwrapper/tests/test_scheduler_error_parser.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/nwchemio.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/qchemio.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/smartio.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/tests/__init__.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/tests/test_aseio.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/tests/test_babelio.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/tests/test_cifio.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/tests/test_cssrio.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/tests/test_feffio.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/tests/test_feffio_set.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/tests/test_gaussianio.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/tests/test_nwchemio.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/tests/test_qchemio.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/tests/test_smartio.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/tests/test_vaspio_set.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/tests/test_xyzio.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/tests/test_zeoio.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/vaspio/__init__.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/vaspio/tests/__init__.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/vaspio/tests/test_vasp_input.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/vaspio/tests/test_vasp_output.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/vaspio/vasp_input.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/vaspio/vasp_output.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/vaspio_set.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/xyzio.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/io/zeoio.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/matproj/rest.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/matproj/snl.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/matproj/tests/__init__.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/matproj/tests/test_rest.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/matproj/tests/test_snl.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/optimization/linear_assignment.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/optimization/tests/test_linear_assignment.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/phasediagram/entries.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/phasediagram/pdanalyzer.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/phasediagram/pdmaker.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/phasediagram/plotter.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/phasediagram/tests/test_entries.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/phasediagram/tests/test_pdanalyzer.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/phasediagram/tests/test_pdmaker.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/phasediagram/tests/test_plotter.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/serializers/json_coders.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/serializers/tests/test_json_coders.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/structure_prediction/substitution_probability.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/structure_prediction/substitutor.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/structure_prediction/tests/test_substitution_probability.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/structure_prediction/tests/test_substitutor.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/symmetry/bandstructure.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/symmetry/finder.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/symmetry/pointgroup.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/symmetry/spacegroup.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/symmetry/structure.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/symmetry/tests/__init__.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/symmetry/tests/test_finder.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/symmetry/tests/test_pointgroup.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/symmetry/tests/test_spacegroup.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/transformations/advanced_transformations.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/transformations/defect_transformations.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/transformations/site_transformations.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/transformations/standard_transformations.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/transformations/tests/test_advanced_transformations.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/transformations/tests/test_defect_transformations.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/transformations/tests/test_site_transformations.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/transformations/tests/test_standard_transformations.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/transformations/transformation_abc.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/util/__init__.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/util/coord_utils.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/util/io_utils.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/util/num_utils.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/util/plotting_utils.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/util/string_utils.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/util/testing.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/util/tests/__init__.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/util/tests/test_coord_utils.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/util/tests/test_decorators.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/util/tests/test_io_utils.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/util/tests/test_string_utils.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/vis/structure_vtk.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/requirements-optional.txt</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/requirements.txt</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/scripts/gaussian_analyzer.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/scripts/pmg</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/setup.py</PATH>
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Created" />
+            <option name="myStatusName" value="Created" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="CREATED" />
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/dev_scripts/force_unicode.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/dev_scripts/profile_xml.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/docs/pymatgen.io.gwwrapper.rst</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/docs/pymatgen.io.gwwrapper.scripts.rst</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/util/structures/CsCl.json</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/util/structures/Graphite.json</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/util/structures/K2O2.json</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/util/structures/Li10GeP2S12.json</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/util/structures/Li2O.json</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/util/structures/Li2O2.json</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/util/structures/Li3V2(PO4)3.json</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/util/structures/LiFePO4.json</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/util/structures/NaFePO4.json</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/util/structures/Si.json</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/vis/tests/__init__.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/vis/tests/test_structure_vtk.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/test_files/molecules/ghost_atoms.qcout</PATH>
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Deleted" />
+            <option name="myStatusName" value="Deleted" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="true" />
+            <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/util/decorators.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/util/lazy.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/pymatgen/util/tests/test_lazy.py</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/test_files/Graphite.json</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/test_files/K2O2.json</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/test_files/Li10GeP2S12.json</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/test_files/Li2O.json</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/test_files/Li2O2.json</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/test_files/Li3V2(PO4)3.json</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/test_files/LiFePO4.json</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/../pymatgen/test_files/NaFePO4.json</PATH>
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Restored" />
+            <option name="myStatusName" value="Will be restored" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="RESTORED" />
+          </FILE-GROUP>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Modified" />
+          <option name="myStatusName" value="Modified" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MODIFIED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Skipped" />
+          <option name="myStatusName" value="Skipped" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SKIPPED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with conflicts" />
+          <option name="myStatusName" value="Will be merged with conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_CONFLICTS" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with tree conflicts" />
+          <option name="myStatusName" value="Merged with tree conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with property conflicts" />
+          <option name="myStatusName" value="Will be merged with property conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged" />
+          <option name="myStatusName" value="Will be merged" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Not in repository" />
+          <option name="myStatusName" value="Not in repository" />
+          <option name="mySupportsDeletion" value="true" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UNKNOWN" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally added" />
+          <option name="myStatusName" value="Locally added" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_ADDED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally removed" />
+          <option name="myStatusName" value="Locally removed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_REMOVED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Switched" />
+          <option name="myStatusName" value="Switched" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SWITCHED" />
+        </FILE-GROUP>
+      </UpdatedFiles>
+    </UpdateInfo>
   </component>
   <component name="RunManager">
     <configuration default="true" type="tests" factoryName="py.test">
@@ -773,14 +1103,17 @@
       <created>1411133528749</created>
       <updated>1411133528749</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="output handling">
+      <created>1411134978644</created>
+      <updated>1411134978644</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="22" width="1256" height="715" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -790,14 +1123,15 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32998326" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32998326" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32998326" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -830,13 +1164,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../PyBench-org/PyBench/core/benchmarks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="645">
-          <caret line="37" column="11" selection-start-line="37" selection-start-column="11" selection-end-line="37" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../PyBench-org/PyBench/core/data.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="615">
@@ -1073,7 +1400,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
           <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1081,7 +1407,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3553" max-vertical-offset="11235">
           <caret line="249" column="8" selection-start-line="249" selection-start-column="8" selection-end-line="249" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1104,7 +1429,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1303" max-vertical-offset="21705">
           <caret line="99" column="8" selection-start-line="99" selection-start-column="8" selection-end-line="99" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1112,7 +1436,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="548">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1120,7 +1443,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="548">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1134,32 +1456,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../pymatgen/pymatgen/io/gwwrapper/codeinterfaces.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4839" max-vertical-offset="7545">
-          <caret line="332" column="22" selection-start-line="332" selection-start-column="22" selection-end-line="332" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PyBench/core/benchmarks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1584" max-vertical-offset="2160">
-          <caret line="74" column="14" selection-start-line="74" selection-start-column="14" selection-end-line="74" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../GWplotting/GWplotting/collection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="358" max-vertical-offset="4920">
-          <caret line="57" column="36" selection-start-line="30" selection-start-column="0" selection-end-line="57" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="5010" max-vertical-offset="7560">
+          <caret line="334" column="22" selection-start-line="334" selection-start-column="22" selection-end-line="334" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../pymatgen/pymatgen/io/gwwrapper/datastructures.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="7577" max-vertical-offset="13755">
-          <caret line="494" column="8" selection-start-line="494" selection-start-column="8" selection-end-line="494" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="7637" max-vertical-offset="13800">
+          <caret line="498" column="8" selection-start-line="498" selection-start-column="8" selection-end-line="498" selection-end-column="8" />
           <folding />
         </state>
       </provider>
@@ -1172,10 +1478,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../pymatgen/pymatgen/io/vaspio/vasp_output.py">
+    <entry file="file://$PROJECT_DIR$/PyBench/core/descriptions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="13905" max-vertical-offset="30555">
-          <caret line="927" column="16" selection-start-line="927" selection-start-column="16" selection-end-line="927" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1800">
+          <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1183,23 +1489,47 @@
     <entry file="file://$PROJECT_DIR$/PyBench/scripts/BenchOutput.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
-          <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../pymatgen/pymatgen/io/vaspio/vasp_output.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="13530" max-vertical-offset="30780">
+          <caret line="923" column="9" selection-start-line="923" selection-start-column="9" selection-end-line="923" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../GWplotting/GWplotting/plots.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3765">
+          <caret line="200" column="6" selection-start-line="200" selection-start-column="6" selection-end-line="200" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../GWplotting/GWplotting/collection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="358" max-vertical-offset="4920">
+          <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PyBench/core/benchmarks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1327" max-vertical-offset="2175">
+          <caret line="105" column="80" selection-start-line="105" selection-start-column="80" selection-end-line="105" selection-end-column="80" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PyBench/core/data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2490">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PyBench/core/descriptions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.912088" vertical-offset="0" max-vertical-offset="1800">
-          <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+        <state vertical-scroll-proportion="-1.6647564" vertical-offset="1676" max-vertical-offset="3060">
+          <caret line="73" column="65" selection-start-line="73" selection-start-column="65" selection-end-line="73" selection-end-column="65" />
           <folding />
         </state>
       </provider>

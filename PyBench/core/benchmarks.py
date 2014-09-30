@@ -103,7 +103,8 @@ class Benchmark():
                         sys.stdout.flush()
                         v = functions(x)(o, n)
                         inpset.incar_settings.update({x: v})
-                        path = '%s_super%s_par%s%s%s' % (self.name, s, n, x, v)
+                        path = '%s-%s_super%s_par%s%s' % (n, self.name, s, n, x)
+                        inpset.incar_settings.update({'system': '%s_super%s' % (self.name, s)})
                         inpset.write_input(structure=struc, output_dir=path)
                         q = self.manager.qadapter
                         q.set_mpi_ncpus(n)

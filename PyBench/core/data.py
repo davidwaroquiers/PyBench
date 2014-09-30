@@ -18,13 +18,14 @@ from xml.etree.cElementTree import ParseError
 from pymongo.errors import OperationFailure
 from pymongo import Connection
 import pprint
+import matplotlib.pyplot as plt
 
 
 def log(a):
     pass
 
 
-def get_collection(server="marilyn.pcpm.ucl.ac.be", db_name="Bencmark_results", collection="vasp", with_gfs=False):
+def get_collection(server="marilyn.pcpm.ucl.ac.be", db_name="benchmarks", collection="vasp-5.2", with_gfs=False):
     """
     Add the actual pymongo collection object as self.col
 
@@ -74,17 +75,24 @@ class BaseDataSet(object):
                 raise RuntimeError
         self.data = {}
         try:
-            self.col = get_collection()
+            self.col = get_collection(collection=self.code+"-"+self.version)
         except pymongo.errors.OperationFailure:
             print("pymongo operation failure, no DB support")
         self.ncpus = []
         self.gh = []
+        self.systems = []
         self.data = {}
 
     @abstractproperty
     def code(self):
         """
         the code for the concrete data set
+        """
+
+    @abstractproperty
+    def version(self):
+        """
+        the version of the code
         """
 
     @abstractmethod
@@ -99,7 +107,7 @@ class BaseDataSet(object):
         entry['desc_hash'] = hash(self.description)
         entry['data'] = self.data
         pprint.pprint(entry)
-        #self.col.save(entry)
+        self.col.save(entry)
 
     def print_parameter_lists(self):
         print("NCPUS:\n%s\n" % self.ncpus)
@@ -111,8 +119,33 @@ class BaseDataSet(object):
                 self.ncpus.append(entry["ncpus"])
             if entry["generator_hash"] not in self.gh:
                 self.gh.append(entry["generator_hash"])
-
+            if entry["system"] not in self.systems:
+                self.systems.append(entry["system"])
         self.ncpus.sort()
+
+    def plot_data(self, gh):
+        """
+        plot the time v.s. ncpu for the current data,
+        this method should be used on a single generators data
+        """
+        plot = plt
+        l1 = []
+        l2 = []
+        y_data = {}
+        npars = {}
+        for system in self.systems:
+            y_data[system] = []
+            npars[system] = []
+        for entry in self.data:
+            s = entry['system']
+            y_data[s].append((entry['NPAR'], entry['ncpus'], entry['run_stats']['Total CPU time used (sec)']))
+            npars[s].append(entry['NPAR'])
+        for system in self.systems:
+            npars[system].sort().unique()
+            y_data[system].sort()
+            for npar in npars[system]:
+                l1.append("%s @ NPAR %s" % (system, npar))
+                l2.append(plot.scatter(x, y, '.')[0])
 
 
 class VaspData(BaseDataSet):
@@ -123,12 +156,17 @@ class VaspData(BaseDataSet):
     def code(self):
         return 'vasp'
 
+    @property
+    def version(self):
+        return "5.2"
+
     def add_data_entry(self, path):
         try:
             xml = Vasprun(os.path.join(path, "vasprun.xml"))
             out = Outcar(os.path.join(path, "OUTCAR"))
             if xml.converged:
                 entry = {
+                    'system': path.split('-', 1),
                     "NPAR": xml.parameters.get('NPAR'),
                     'ncpus': int(out.run_stats['cores']),
                     "final_energy": xml.final_energy,

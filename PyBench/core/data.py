@@ -107,7 +107,15 @@ class BaseDataSet(object):
         entry['desc_hash'] = hash(self.description)
         entry['data'] = self.data
         pprint.pprint(entry)
-        self.col.save(entry)
+        count = self.col.find({'desc_hash': hash(self.description)}).count()
+        if count == 0:
+            self.col.insert(entry)
+        elif count == 1:
+            new_entry = self.col.find_one({'desc_hash': hash(self.description)})
+            new_entry.update(entry)
+            self.col.save(new_entry)
+        else:
+            raise RuntimeError
 
     def print_parameter_lists(self):
         print("NCPUS:\n%s\n" % self.ncpus)

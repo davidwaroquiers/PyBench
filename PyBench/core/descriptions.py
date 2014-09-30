@@ -37,11 +37,23 @@ class BaseDescription(object):
     def __hash__(self):
         return hash(frozenset(self.description))
 
+    def __str__(self):
+        d = self.description
+        string = "%s version %s\n compiled with %s, using %s and %s\n%s\nby %s (%s)" % \
+                 (d['code'], d['version'], d['compiler'], d['blas_lib'], d['fft_lib'], d['remarks'], d['user_name'],
+                  d['user_email'])
+        return string
+
     @abstractmethod
     def complete_template(self):
         """
         method to complete the template for a specific code
         """
+
+    def from_db_entry(self, entry):
+        entry.pop('data')
+        entry.pop('desc_hash')
+        self.description = entry
 
     def print_template(self):
         """

@@ -117,9 +117,20 @@ class BaseDataSet(object):
         else:
             raise RuntimeError
 
-    def print_parameter_lists(self):
-        print("NCPUS:\n%s\n" % self.ncpus)
-        print("Generator Hashes:\n%s\n" % self.gh)
+    def get_from_db(self, gh=None):
+        if gh == None:
+            """
+            no generator hash specified: create a list of all gh available and let the usere pick one
+            """
+            data_sets = self.col.find()
+            i = 0
+            hash_list = []
+            for data_set in data_sets:
+                print("set %s:" % i)
+                hash_list.append(data_set['desc_hash'])
+                desc = get_description(data_set['code'])
+                desc.from_db_enrty(data_set)
+                print(desc)
 
     def set_parameter_lists(self):
         for entry in self.data.values():
@@ -184,7 +195,7 @@ class VaspData(BaseDataSet):
                     "run_stats": out.run_stats}
                 entry_hash = hash((entry['ncpus'], entry['NPAR'], entry['generator_hash']))
                 log(entry)
-                self.data.update({entry_hash: entry})
+                self.data.update({str(entry_hash): entry})
         except (ParseError, ValueError):
             pass
 

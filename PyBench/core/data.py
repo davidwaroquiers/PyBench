@@ -142,6 +142,11 @@ class BaseDataSet(object):
                 self.systems.append(entry["system"])
         self.ncpus.sort()
 
+    def print_parameter_lists(self):
+        print(self.ncpus)
+        print(self.gh)
+        print(self.systems)
+
     def plot_data(self, gh):
         """
         plot the time v.s. ncpu for the current data,

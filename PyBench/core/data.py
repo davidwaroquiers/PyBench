@@ -63,21 +63,22 @@ class BaseDataSet(object):
     """
     __metaclass__ = ABCMeta
 
-    def __init__(self):
+    def __init__(self, new=False):
         """
         description will contain the description of the cluster and code version and compilation
         data will contain the actual data
         """
         self.description = get_description(self.code)
-        if not self.description.read_from_file():
-            print('desctipion found, create it from template please:')
-            if not self.description.create_interactively_from_template():
-                raise RuntimeError
-        self.data = {}
+        if new:
+            if not self.description.read_from_file():
+                print('desctipion found, create it from template please:')
+                if not self.description.create_interactively_from_template():
+                    raise RuntimeError
         try:
             self.col = get_collection(collection=self.code+"-"+self.version)
         except pymongo.errors.OperationFailure:
             print("pymongo operation failure, no DB support")
+        self.data = {}
         self.ncpus = []
         self.gh = []
         self.systems = []
@@ -117,10 +118,10 @@ class BaseDataSet(object):
         else:
             raise RuntimeError
 
-    def get_from_db(self, gh=None):
-        if gh == None:
+    def get_from_db(self, dh=None):
+        if dh == None:
             """
-            no generator hash specified: create a list of all gh available and let the usere pick one
+            no description hash specified: create a list of all gh available and let the user pick one
             """
             data_sets = self.col.find()
             i = 0
@@ -128,9 +129,17 @@ class BaseDataSet(object):
             for data_set in data_sets:
                 print("set %s:" % i)
                 hash_list.append(data_set['desc_hash'])
-                desc = get_description(data_set['code'])
-                desc.from_db_enrty(data_set)
+                desc = get_description(self.code)
+                desc.from_db_entry(data_set)
                 print(desc)
+                i += 1
+            dh = hash_list[int(raw_input('Which set should be imported?\n'))]
+        print(dh)
+        entry = self.col.find({'desc_hash': dh})[0]
+        pprint.pprint(entry)
+        self.data = entry['data']
+        self.description.from_db_entry(entry)
+        print(self.description)
 
     def set_parameter_lists(self):
         for entry in self.data.values():
@@ -147,7 +156,7 @@ class BaseDataSet(object):
         print(self.gh)
         print(self.systems)
 
-    def plot_data(self, gh):
+    def plot_data(self):
         """
         plot the time v.s. ncpu for the current data,
         this method should be used on a single generators data
@@ -158,16 +167,19 @@ class BaseDataSet(object):
         y_data = {}
         npars = {}
         for system in self.systems:
+            print(system)
             y_data[system] = []
             npars[system] = []
-        for entry in self.data:
-            s = entry['system']
+        for entry in self.data.values():
+            s = entry['system'][1]
             y_data[s].append((entry['NPAR'], entry['ncpus'], entry['run_stats']['Total CPU time used (sec)']))
             npars[s].append(entry['NPAR'])
         for system in self.systems:
             npars[system].sort().unique()
             y_data[system].sort()
+            pprint.pprint(y_data)
             for npar in npars[system]:
+
                 l1.append("%s @ NPAR %s" % (system, npar))
                 l2.append(plot.scatter(x, y, '.')[0])
 
@@ -190,7 +202,7 @@ class VaspData(BaseDataSet):
             out = Outcar(os.path.join(path, "OUTCAR"))
             if xml.converged:
                 entry = {
-                    'system': path.split('-', 1),
+                    'system': path.split('/')[1].split('par')[0],
                     "NPAR": xml.parameters.get('NPAR'),
                     'ncpus': int(out.run_stats['cores']),
                     "final_energy": xml.final_energy,
@@ -213,11 +225,11 @@ class VaspData(BaseDataSet):
                 self.add_data_entry(dirs[0])
 
 
-def get_data_set(code):
+def get_data_set(code, new=False):
     """
     factory function
     :param code:
     :return:
     """
-    data_sets = {'vasp': VaspData()}
-    return data_sets[code]
+    data_sets = {'vasp': VaspData}
+    return data_sets[code](new=new)

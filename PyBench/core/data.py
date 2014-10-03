@@ -202,7 +202,7 @@ class VaspData(BaseDataSet):
             out = Outcar(os.path.join(path, "OUTCAR"))
             if xml.converged:
                 entry = {
-                    'system': path.split('/')[1].split('par')[0],
+                    'system': path.split('/')[1].split('_par')[0],
                     "NPAR": xml.parameters.get('NPAR'),
                     'ncpus': int(out.run_stats['cores']),
                     "final_energy": xml.final_energy,

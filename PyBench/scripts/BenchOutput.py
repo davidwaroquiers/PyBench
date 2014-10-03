@@ -19,7 +19,7 @@ if __name__ == "__main__":
     code = 'vasp'
 #    desc = get_description(code=code)
 #    desc.read_from_file()
-    data_set = get_data_set(code=code)
+    data_set = get_data_set(code=code, new=True)
     data_set.gather_data()
     data_set.set_parameter_lists()
     data_set.print_parameter_lists()

@@ -14,7 +14,7 @@ import numpy as np
 from abc import ABCMeta, abstractmethod, abstractproperty
 from PyBench.core.descriptions import get_description
 from pymatgen.io.vaspio.vasp_output import Vasprun
-from pymatgen.io.vaspio.vasp_output import Outcar
+from pymatgen.io.vaspio.vasp_output import Outcar, Incar
 from xml.etree.cElementTree import ParseError
 from pymongo.errors import OperationFailure
 from pymongo import Connection
@@ -225,20 +225,38 @@ class VaspData(BaseDataSet):
         try:
             xml = Vasprun(os.path.join(path, "vasprun.xml"))
             out = Outcar(os.path.join(path, "OUTCAR"))
-            #if xml.converged or True:
-            entry = {
-                'system': path.split('/')[1].split('_par')[0],
-                "NPAR": xml.parameters.get('NPAR'),
-                'ncpus': int(out.run_stats['cores']),
-                "final_energy": xml.final_energy,
-                "vasp_version": xml.vasp_version,
-                "generator": xml.generator,
-                "generator_hash": hash(frozenset(xml.generator)),                    "run_stats": out.run_stats}
-            entry_hash = hash((entry['ncpus'], entry['NPAR'], entry['generator_hash'], entry['system']))
-            log(entry)
-            self.data.update({str(entry_hash): entry})
-            print(entry['ncpus'], entry['NPAR'], entry['generator_hash'], entry['system'])
+            if xml.converged or True:
+                entry = {
+                    'system': path.split('/')[1].split('_par')[0],
+                    "NPAR": xml.parameters.get('NPAR'),
+                    'ncpus': int(out.run_stats['cores']),
+                    "final_energy": xml.final_energy,
+                    "vasp_version": xml.vasp_version,
+                    "generator": xml.generator,
+                    "generator_hash": hash(frozenset(xml.generator)),
+                    "run_stats": out.run_stats}
+                entry_hash = hash((entry['ncpus'], entry['NPAR'], entry['generator_hash'], entry['system']))
+                log(entry)
+                self.data.update({str(entry_hash): entry})
+                print(entry['ncpus'], entry['NPAR'], entry['generator_hash'], entry['system'])
         except (ParseError, ValueError):
+            try:
+                out = Outcar(os.path.join(path, "OUTCAR"))
+                inc = Incar(os.path.join(path, "INCAR"))
+                entry = {
+                    "NPAR": inc.as_dict()['NPAR'],
+                    'ncpus': int(out.run_stats['cores']),
+                    "final_energy": -1,
+                    "vasp_version": 'v',
+                    "generator": {},
+                    "generator_hash": hash(' '),
+                    "run_stats": out.run_stats}
+                entry_hash = hash((entry['ncpus'], entry['NPAR'], entry['generator_hash'], entry['system']))
+                log(entry)
+                self.data.update({str(entry_hash): entry})
+                print(entry['ncpus'], entry['NPAR'], entry['generator_hash'], entry['system'])
+            except (ParseError, ValueError):
+                print('parsing error')
             pass
 
     def gather_data(self):

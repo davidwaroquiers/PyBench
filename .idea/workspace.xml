@@ -49,8 +49,8 @@
       <file leaf-file-name="data.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PyBench/core/data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.65543646" vertical-offset="3142" max-vertical-offset="3975">
-              <caret line="238" column="12" selection-start-line="238" selection-start-column="12" selection-end-line="238" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.712098" vertical-offset="3390" max-vertical-offset="4245">
+              <caret line="257" column="43" selection-start-line="257" selection-start-column="43" selection-end-line="257" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -961,7 +961,11 @@
       <created>1412782144884</created>
       <updated>1412782144885</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="db interaction">
+      <created>1412782260633</created>
+      <updated>1412782260633</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1388,8 +1392,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PyBench/core/data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65543646" vertical-offset="3142" max-vertical-offset="3975">
-          <caret line="238" column="12" selection-start-line="238" selection-start-column="12" selection-end-line="238" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.712098" vertical-offset="3390" max-vertical-offset="4245">
+          <caret line="257" column="43" selection-start-line="257" selection-start-column="43" selection-end-line="257" selection-end-column="43" />
           <folding />
         </state>
       </provider>

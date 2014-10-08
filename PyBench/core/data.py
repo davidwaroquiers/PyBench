@@ -10,6 +10,7 @@ import copy
 import os
 import pymongo
 import gridfs
+import numpy as np
 from abc import ABCMeta, abstractmethod, abstractproperty
 from PyBench.core.descriptions import get_description
 from pymatgen.io.vaspio.vasp_output import Vasprun
@@ -136,7 +137,7 @@ class BaseDataSet(object):
             dh = hash_list[int(raw_input('Which set should be imported?\n'))]
         print(dh)
         entry = self.col.find({'desc_hash': dh})[0]
-        pprint.pprint(entry)
+        #pprint.pprint(entry)
         self.data = entry['data']
         self.description.from_db_entry(entry)
         print(self.description)
@@ -167,21 +168,33 @@ class BaseDataSet(object):
         y_data = {}
         npars = {}
         for system in self.systems:
-            print(system)
             y_data[system] = []
-            npars[system] = []
+            npars[system] = [0, 0.5, 1]
         for entry in self.data.values():
-            s = entry['system'][1]
-            y_data[s].append((entry['NPAR'], entry['ncpus'], entry['run_stats']['Total CPU time used (sec)']))
-            npars[s].append(entry['NPAR'])
+            s = entry['system']
+            if entry['NPAR'] == entry['ncpus']:
+                pnp = 1
+            elif entry['NPAR'] == 1:
+                pnp = 0
+            else:
+                pnp = 0.5
+            y_data[s].append((pnp, entry['ncpus'],
+                              entry['run_stats']['Total CPU time used (sec)']))
+            #npars[s].append(entry['NPAR'])
         for system in self.systems:
-            npars[system].sort().unique()
+            #npars[system] = sorted(set(npars[system]))
             y_data[system].sort()
-            pprint.pprint(y_data)
             for npar in npars[system]:
-
-                l1.append("%s @ NPAR %s" % (system, npar))
-                l2.append(plot.scatter(x, y, '.')[0])
+                x, y = [], []
+                for d in y_data[system]:
+                    if d[0] == npar:
+                        x.append(d[1])
+                        y.append(d[2])
+                w = "%s@NPAR%s" % (system, npar)
+                l1.append(w)
+                l2.append(plot.plot(x, y, 'o-')[0])
+        plot.legend(l2, l1)
+        plot.show()
 
 
 class VaspData(BaseDataSet):

@@ -9,5 +9,7 @@ PyBench/core/__init__.py
 PyBench/core/benchmarks.py
 PyBench/core/data.py
 PyBench/core/descriptions.py
+PyBench/scripts/BenchOutput.py
+PyBench/scripts/BenchPlot.py
 PyBench/scripts/BenchSetup.py
 PyBench/scripts/__init__.py

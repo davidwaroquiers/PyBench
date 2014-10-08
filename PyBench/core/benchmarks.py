@@ -95,7 +95,7 @@ class Benchmark():
         sys.stdout.write(self.bar_len*"-"+"\n")
         sys.stdout.flush()
         for s in self.sizes:
-            print(s)
+            print('size', s)
             sys.stdout.write("|")
             sys.stdout.flush()
             struc = copy.deepcopy(self.structure)
@@ -111,7 +111,7 @@ class Benchmark():
                         sys.stdout.flush()
                         v = functions(x)(o, n)
                         inpset.incar_settings.update({x: v})
-                        path = '%s-%s_super%s_par%s%s' % (n, self.name, s, n, x)
+                        path = '%s_super%s_par%s%s%s' % (self.name, s, n, x, o)
                         inpset.incar_settings.update({'system': '%s_super%s' % (self.name, s)})
                         inpset.write_input(structure=struc, output_dir=path)
                         q = self.manager.qadapter

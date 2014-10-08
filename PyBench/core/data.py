@@ -223,7 +223,7 @@ class VaspData(BaseDataSet):
                     "generator": xml.generator,
                     "generator_hash": hash(frozenset(xml.generator)),
                     "run_stats": out.run_stats}
-                entry_hash = hash((entry['ncpus'], entry['NPAR'], entry['generator_hash']))
+                entry_hash = hash((entry['ncpus'], entry['NPAR'], entry['generator_hash'], entry['system']))
                 log(entry)
                 self.data.update({str(entry_hash): entry})
         except (ParseError, ValueError):

@@ -225,7 +225,7 @@ class VaspData(BaseDataSet):
         try:
             xml = Vasprun(os.path.join(path, "vasprun.xml"))
             out = Outcar(os.path.join(path, "OUTCAR"))
-            if xml.converged:
+            if xml.converged or True:
                 entry = {
                     'system': path.split('/')[1].split('_par')[0],
                     "NPAR": xml.parameters.get('NPAR'),

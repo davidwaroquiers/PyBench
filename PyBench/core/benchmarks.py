@@ -95,18 +95,14 @@ class Benchmark():
         sys.stdout.write(self.bar_len*"-"+"\n")
         sys.stdout.flush()
         for s in self.sizes:
-            print('size', s)
             sys.stdout.write("|")
             sys.stdout.flush()
             struc = copy.deepcopy(self.structure)
             trans = SupercellTransformation.from_scaling_factors(scale_a=s, scale_b=s, scale_c=s)
             struc = trans.apply_transformation(struc)
             for n in self.np_list:
-                print(n)
                 for x in self.parameter_lists:
-                    print(x)
                     for o in self.parameter_lists[x]:
-                        print(o)
                         sys.stdout.write("*")
                         sys.stdout.flush()
                         v = functions(x)(o, n)

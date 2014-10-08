@@ -40,6 +40,9 @@ class BenchVaspInputSet(MPStaticVaspInputSet):
         def get_poscar(self, structure):
             return Poscar(structure)
 
+        def set_input(self):
+            self.incar_settings = {'ENCUT': 300, 'PREC': 'Normal', 'NSW': 0, 'LWAVE': False, 'LREAL': 'AUTO'}
+
 
 class Benchmark():
     """
@@ -85,6 +88,7 @@ class Benchmark():
         :return 0 on succes
         """
         inpset = BenchVaspInputSet()
+        inpset.set_input()
         print('testing executable %s' % self.subject)
         print("creating input for %s system sizes and %s calculations per size:" %
               (len(self.sizes), int(self.total / len(self.sizes))))

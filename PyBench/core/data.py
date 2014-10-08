@@ -210,6 +210,9 @@ class VaspData(BaseDataSet):
         return "5.2"
 
     def add_data_entry(self, path):
+        """
+        parse the data found in path and add it to data
+        """
         try:
             xml = Vasprun(os.path.join(path, "vasprun.xml"))
             out = Outcar(os.path.join(path, "OUTCAR"))

@@ -239,7 +239,7 @@ class VaspData(BaseDataSet):
                 log(entry)
                 self.data.update({str(entry_hash): entry})
                 print(entry['ncpus'], entry['NPAR'], entry['generator_hash'], entry['system'])
-        except (ParseError, ValueError):
+        except None:
             try:
                 out = Outcar(os.path.join(path, "OUTCAR"))
                 inc = Incar(os.path.join(path, "INCAR"))

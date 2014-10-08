@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b8d378ed-ac42-4e6b-859e-45bb3953a31f" name="Default" comment="">
+    <list default="true" id="b8d378ed-ac42-4e6b-859e-45bb3953a31f" name="Default" comment="db interaction">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PyBench/core/data.py" afterPath="$PROJECT_DIR$/PyBench/core/data.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -49,8 +49,8 @@
       <file leaf-file-name="data.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PyBench/core/data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.012251149" vertical-offset="3187" max-vertical-offset="3840">
-              <caret line="213" column="55" selection-start-line="213" selection-start-column="55" selection-end-line="213" selection-end-column="55" />
+            <state vertical-scroll-proportion="0.8162328" vertical-offset="3157" max-vertical-offset="3990">
+              <caret line="246" column="25" selection-start-line="246" selection-start-column="25" selection-end-line="246" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -59,7 +59,7 @@
       <file leaf-file-name="plots.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../GWplotting/GWplotting/plots.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3000" max-vertical-offset="3780">
+            <state vertical-scroll-proportion="0.0" vertical-offset="3112" max-vertical-offset="3765">
               <caret line="200" column="6" selection-start-line="200" selection-start-column="6" selection-end-line="200" selection-end-column="6" />
               <folding />
             </state>
@@ -949,7 +949,11 @@
       <created>1412778964812</created>
       <updated>1412778964812</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="db interaction">
+      <created>1412779010095</created>
+      <updated>1412779010095</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1326,14 +1330,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../GWplotting/GWplotting/plots.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3765">
-          <caret line="200" column="6" selection-start-line="200" selection-start-column="6" selection-end-line="200" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PyBench/core/descriptions.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1980">
@@ -1374,10 +1370,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../GWplotting/GWplotting/plots.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3765">
+          <caret line="200" column="6" selection-start-line="200" selection-start-column="6" selection-end-line="200" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/PyBench/core/data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.012251149" vertical-offset="3187" max-vertical-offset="3840">
-          <caret line="213" column="55" selection-start-line="213" selection-start-column="55" selection-end-line="213" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.8162328" vertical-offset="3157" max-vertical-offset="3990">
+          <caret line="246" column="25" selection-start-line="246" selection-start-column="25" selection-end-line="246" selection-end-column="25" />
           <folding />
         </state>
       </provider>

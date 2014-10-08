@@ -165,6 +165,8 @@ class BaseDataSet(object):
         plot = plt
         l1 = []
         l2 = []
+        m = 0
+        t1 = {}
         y_data = {}
         npars = {}
         for system in self.systems:
@@ -178,9 +180,12 @@ class BaseDataSet(object):
                 pnp = 0
             else:
                 pnp = 0.5
-            y_data[s].append((pnp, entry['ncpus'],
-                              entry['run_stats']['Total CPU time used (sec)']))
+            t = entry['run_stats']['Total CPU time used (sec)']
+            y_data[s].append((pnp, entry['ncpus'], t))
             #npars[s].append(entry['NPAR'])
+            if entry['ncpus'] == 1:
+                t1[entry['system']] = t
+        print(t1)
         for system in self.systems:
             #npars[system] = sorted(set(npars[system]))
             y_data[system].sort()
@@ -189,10 +194,14 @@ class BaseDataSet(object):
                 for d in y_data[system]:
                     if d[0] == npar:
                         x.append(d[1])
-                        y.append(d[2])
+                        y.append(t1[system]/d[2])
                 w = "%s@NPAR%s" % (system, npar)
                 l1.append(w)
                 l2.append(plot.plot(x, y, 'o-')[0])
+                m = max(m, max(x))
+        plot.plot([0, m], [0, m], '-')
+        plot.ylabel('speedup')
+        plot.xlabel('n cpus')
         plot.legend(l2, l1)
         plot.show()
 
@@ -229,6 +238,7 @@ class VaspData(BaseDataSet):
                 entry_hash = hash((entry['ncpus'], entry['NPAR'], entry['generator_hash'], entry['system']))
                 log(entry)
                 self.data.update({str(entry_hash): entry})
+                print(entry['ncpus'], entry['NPAR'], entry['generator_hash'], entry['system'])
         except (ParseError, ValueError):
             pass
 

@@ -113,6 +113,8 @@ class BaseDataSet(object):
         pprint.pprint(entry)
         for x in self.col.find():
             print('in db:    ', x['desc_hash'])
+        print(self.description)
+        print(self.description.description)
         print('this one: ', hash(self.description))
         count = self.col.find({'desc_hash': hash(self.description)}).count()
         if count == 0:

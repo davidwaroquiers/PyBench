@@ -21,6 +21,8 @@ from pymongo import Connection
 import pprint
 import matplotlib.pyplot as plt
 
+symbol = [' ', 'o', '^', 's']
+
 
 def log(a):
     pass
@@ -105,17 +107,24 @@ class BaseDataSet(object):
         # read the calculation results
 
     def insert_in_db(self):
-        entry = copy.deepcopy(self.description.description)
+        try:
+            desc = get_description(self.code)
+            desc.read_from_file('description')
+            entry = desc.description
+        except IOError:
+                entry = copy.deepcopy(self.description.description)
         entry['desc_hash'] = hash(self.description)
         entry['data'] = self.data
         pprint.pprint(entry)
         count = self.col.find({'desc_hash': hash(self.description)}).count()
         if count == 0:
-            self.col.insert(entry)
+            print('new')
+            #self.col.insert(entry)
         elif count == 1:
-            new_entry = self.col.find_one({'desc_hash': hash(self.description)})
-            new_entry.update(entry)
-            self.col.save(new_entry)
+            #new_entry = self.col.find_one({'desc_hash': hash(self.description)})
+            #new_entry.update(entry)
+            #self.col.save(new_entry)
+            print('already there')
         else:
             raise RuntimeError
 
@@ -197,8 +206,9 @@ class BaseDataSet(object):
                         y.append(t1[system]/d[2])
                 w = "%s@NPAR%s" % (system, npar)
                 l1.append(w)
-                l2.append(plot.plot(x, y, 'o-')[0])
+                l2.append(plot.plot(x, y, symbol[int(system[-1])]+'-')[0])
                 m = max(m, max(x))
+            plot.gca().set_color_cycle(None)
         plot.plot([0, m], [0, m], '-')
         plot.ylabel('speedup')
         plot.xlabel('n cpus')

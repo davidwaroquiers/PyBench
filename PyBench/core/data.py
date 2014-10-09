@@ -176,7 +176,8 @@ class BaseDataSet(object):
         plot = plt
         l1 = []
         l2 = []
-        m = 0
+        timing = '\n  Absolute timing @ ncpus=1:'
+        mx, my = 0, 0
         t1 = {}
         y_data = {}
         npars = {}
@@ -197,7 +198,7 @@ class BaseDataSet(object):
             if entry['ncpus'] == 1:
                 t1[entry['system']] = t
         print(t1)
-        for system in self.systems:
+        for system in sorted(self.systems):
             #npars[system] = sorted(set(npars[system]))
             y_data[system].sort()
             for npar in npars[system]:
@@ -209,12 +210,17 @@ class BaseDataSet(object):
                 w = "%s@NPAR%s" % (system, npar)
                 l1.append(w)
                 l2.append(plot.plot(x, y, symbol[int(system[-1])]+'-')[0])
-                m = max(m, max(x))
+                my = max(my, max(y))
+                mx = max(mx, max(x))
             plot.gca().set_color_cycle(None)
-        plot.plot([0, m], [0, m], '-')
+            timing += "\n    %s: %s s" % (system, t1[system])
+        plot.plot([0, my], [0, my], '-')
         plot.ylabel('speedup')
         plot.xlabel('n cpus')
-        plot.legend(l2, l1)
+        plot.text(mx+20, 0, str(self.description) + timing)
+        plot.subplots_adjust(right=0.60)
+        plot.legend(l2, l1,  bbox_to_anchor=(1.7, 1))
+
         plot.show()
 
 

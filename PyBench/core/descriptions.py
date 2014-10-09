@@ -39,9 +39,9 @@ class BaseDescription(object):
 
     def __str__(self):
         d = self.description
-        string = "  %s version %s\n  compiled with %s, using %s and %s\n  %s\n  by %s (%s)" % \
-                 (d['code'], d['version'], d['compiler'], d['blas_lib'], d['fft_lib'], d['remarks'], d['user_name'],
-                  d['user_email'])
+        string = "  %s version %s, ran on %s\n  compiled with %s\n  using %s and %s\n  %s\n  by %s\n  (%s)" % \
+                 (d['code'], d['version'], d['cluster'], d['compiler'], d['blas_lib'], d['fft_lib'], d['remarks'],
+                  d['user_name'], d['user_email'])
         return string
 
     @abstractmethod

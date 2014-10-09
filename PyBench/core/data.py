@@ -113,19 +113,19 @@ class BaseDataSet(object):
         pprint.pprint(entry)
         for x in self.col.find():
             print('in db:    ', x['desc_hash'])
-            print(x['fft_lib'])
-        print(self.description)
-        print(self.description.description)
-        print(hash(frozenset(self.description.description)))
+        #    print(x['fft_lib'])
+        #print(self.description)
+        #print(self.description.description)
+        #print(hash(frozenset(self.description.description)))
         print('this one: ', hash(self.description))
         count = self.col.find({'desc_hash': hash(self.description)}).count()
         if count == 0:
             print('new')
-            #self.col.insert(entry)
+            self.col.insert(entry)
         elif count == 1:
-            #new_entry = self.col.find_one({'desc_hash': hash(self.description)})
-            #new_entry.update(entry)
-            #self.col.save(new_entry)
+            new_entry = self.col.find_one({'desc_hash': hash(self.description)})
+            new_entry.update(entry)
+            self.col.save(new_entry)
             print('already there')
         else:
             raise RuntimeError

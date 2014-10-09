@@ -115,6 +115,7 @@ class BaseDataSet(object):
             print('in db:    ', x['desc_hash'])
         print(self.description)
         print(self.description.description)
+        print(hash(frozenset(self.description.description)))
         print('this one: ', hash(self.description))
         count = self.col.find({'desc_hash': hash(self.description)}).count()
         if count == 0:

@@ -35,7 +35,7 @@ class BaseDescription(object):
         self.complete_template()
 
     def __hash__(self):
-        return hash(frozenset(self.description))
+        return hash(frozenset(self.description.items()))
 
     def __str__(self):
         d = self.description

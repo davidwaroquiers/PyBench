@@ -107,15 +107,13 @@ class BaseDataSet(object):
         # read the calculation results
 
     def insert_in_db(self):
-        try:
-            desc = get_description(self.code)
-            desc.read_from_file('description')
-            entry = desc.description
-        except IOError:
-                entry = copy.deepcopy(self.description.description)
+        entry = copy.deepcopy(self.description.description)
         entry['desc_hash'] = hash(self.description)
         entry['data'] = self.data
         pprint.pprint(entry)
+        for x in self.col.find():
+            print('in db:    ', x['desc_hash'])
+        print('this one: ', hash(self.description))
         count = self.col.find({'desc_hash': hash(self.description)}).count()
         if count == 0:
             print('new')

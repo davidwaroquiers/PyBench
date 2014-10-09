@@ -20,3 +20,5 @@ if __name__ == "__main__":
     data_set.set_parameter_lists()
     data_set.print_parameter_lists()
     data_set.plot_data()
+    data_set.plot_data(mode='abstiming')
+    data_set.plot_data(mode='energies')

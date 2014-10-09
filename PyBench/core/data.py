@@ -22,6 +22,8 @@ import pprint
 import matplotlib.pyplot as plt
 
 symbol = [' ', 'o', '^', 's']
+text = "Description:\n"
+
 
 
 def log(a):
@@ -168,7 +170,7 @@ class BaseDataSet(object):
         print(self.gh)
         print(self.systems)
 
-    def plot_data(self):
+    def plot_data(self, mode='speedup'):
         """
         plot the time v.s. ncpu for the current data,
         this method should be used on a single generators data
@@ -176,7 +178,7 @@ class BaseDataSet(object):
         plot = plt
         l1 = []
         l2 = []
-        timing = '\n  Absolute timing @ ncpus=1:'
+        timing = '\n\nAbsolute timing @ ncpus=1:'
         mx, my = 0, 0
         t1 = {}
         y_data = {}
@@ -193,7 +195,8 @@ class BaseDataSet(object):
             else:
                 pnp = 0.5
             t = entry['run_stats']['Total CPU time used (sec)']
-            y_data[s].append((pnp, entry['ncpus'], t))
+            e = entry['final_energy']
+            y_data[s].append((pnp, entry['ncpus'], t, e, ))
             #npars[s].append(entry['NPAR'])
             if entry['ncpus'] == 1:
                 t1[entry['system']] = t
@@ -202,24 +205,38 @@ class BaseDataSet(object):
             #npars[system] = sorted(set(npars[system]))
             y_data[system].sort()
             for npar in npars[system]:
-                x, y = [], []
+                x, y, en = [], [], []
                 for d in y_data[system]:
                     if d[0] == npar:
                         x.append(d[1])
-                        y.append(t1[system]/d[2])
+                        if mode == 'speedup':
+                            y.append(t1[system]/d[2])
+                        elif mode == 'abstiming':
+                            y.append(d[2])
+                        elif mode == 'energies':
+                            y.append(d[3] / (float(system[-1]))**3)
+                        en.append(d[3])
                 w = "%s@NPAR%s" % (system, npar)
                 l1.append(w)
                 l2.append(plot.plot(x, y, symbol[int(system[-1])]+'-')[0])
                 my = max(my, max(y))
                 mx = max(mx, max(x))
             plot.gca().set_color_cycle(None)
-            timing += "\n    %s: %s s" % (system, t1[system])
-        plot.plot([0, my], [0, my], '-')
-        plot.ylabel('speedup')
+            timing += "\n  %s: %s s" % (system, t1[system])
+            #energies += "\n  %s: %s s" % (system, t1[system])
+        if mode == 'speedup':
+            plot.plot([0, my], [0, my], '-')
+            plot.ylabel('speedup')
+        elif mode == 'energies':
+            plot.ylabel('Total energy (eV)')
+        elif mode == 'abstiming':
+            plot.ylabel('Total cpu time (s)')
+
         plot.xlabel('n cpus')
-        plot.text(mx+20, 0, str(self.description) + timing)
+
+        plot.text(mx+20, 0, text + str(self.description) + timing, fontsize=10)
         plot.subplots_adjust(right=0.60)
-        plot.legend(l2, l1,  bbox_to_anchor=(1.7, 1))
+        plot.legend(l2, l1,  bbox_to_anchor=(1.7, 1), fontsize=10)
 
         plot.show()
 

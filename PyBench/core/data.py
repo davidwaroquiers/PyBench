@@ -113,6 +113,7 @@ class BaseDataSet(object):
         pprint.pprint(entry)
         for x in self.col.find():
             print('in db:    ', x['desc_hash'])
+            print(x['fft_lib'])
         print(self.description)
         print(self.description.description)
         print(hash(frozenset(self.description.description)))

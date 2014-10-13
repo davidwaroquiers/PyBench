@@ -101,8 +101,8 @@ class Benchmark():
             trans = SupercellTransformation.from_scaling_factors(scale_a=s, scale_b=s, scale_c=s)
             struc = trans.apply_transformation(struc)
             for n in self.np_list:
-                kpar = min(4, n)
-                inpset.incar_settings.update({'KPAR': kpar})
+                #kpar = min(4, n)
+                #inpset.incar_settings.update({'KPAR': kpar})
                 for x in self.parameter_lists:
                     for o in self.parameter_lists[x]:
                         sys.stdout.write("*")

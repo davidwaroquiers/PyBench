@@ -55,7 +55,7 @@ class Benchmark():
     """
     describing a benchmark
     """
-    def __init__(self, code='vasp', system_id='mp-149', kpar=False, **kwargs):
+    def __init__(self, code='vasp', system_id='mp-149', kpar=True, **kwargs):
         """
         system_id is to be a mp-id to take a base structure from the mp-database
         kwarg can be used to personalize all lists

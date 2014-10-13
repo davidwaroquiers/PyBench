@@ -23,6 +23,13 @@ from pymatgen.io.vaspio.vasp_input import Poscar
 #    return int(n ** parameter)
 
 
+def itr(n):
+    """
+    integer third root
+    """
+    return int(round(n ** (1/3)))
+
+
 def functions(function_type):
     """
     functions for generating input parameters that are a function of the ncpus
@@ -48,7 +55,7 @@ class Benchmark():
     """
     describing a benchmark
     """
-    def __init__(self, code='vasp', system_id='mp-149', **kwargs):
+    def __init__(self, code='vasp', system_id='mp-149', kpar=False, **kwargs):
         """
         system_id is to be a mp-id to take a base structure from the mp-database
         kwarg can be used to personalize all lists
@@ -66,11 +73,13 @@ class Benchmark():
         self.manager = TaskManager.from_user_config()
         self.script_list = []
         self.system_id = system_id
+        self.kpar = kpar
         mp_key = os.environ['MP_KEY']
         with MPRester(mp_key) as mp_database:
             self.structure = mp_database.get_structure_by_material_id(system_id, final=True)
         self.name = str(self.structure.composition.reduced_formula) + "_" + str(self.system_id)
-        self.np_list = [1, 4, 9, 16, 25, 36, 64, 100, 144]
+        #self.np_list = [1, 4, 9, 16, 25, 36, 64, 100, 144]
+        self.np_list = [1, 8, 27, 64, 125, 216, 343]
         self.sizes = [1, 2, 3]
         self.parameter_lists = None
         if self.code == 'vasp':
@@ -101,13 +110,16 @@ class Benchmark():
             trans = SupercellTransformation.from_scaling_factors(scale_a=s, scale_b=s, scale_c=s)
             struc = trans.apply_transformation(struc)
             for n in self.np_list:
-                #kpar = min(4, n)
-                #inpset.incar_settings.update({'KPAR': kpar})
+                if self.kpar:
+                    kpar = itr(n)
+                else:
+                    kpar = 1
+                inpset.incar_settings.update({'KPAR': kpar})
                 for x in self.parameter_lists:
                     for o in self.parameter_lists[x]:
                         sys.stdout.write("*")
                         sys.stdout.flush()
-                        v = functions(x)(o, n)
+                        v = functions(x)(o, int(n/kpar))
                         inpset.incar_settings.update({x: v})
                         path = '%s_super%s_par%s%s%s' % (self.name, s, n, x, o)
                         inpset.incar_settings.update({'system': '%s_super%s' % (self.name, s)})

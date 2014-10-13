@@ -31,7 +31,7 @@ def functions(function_type):
     """
     def npar(parameter, n):
         """function for NPAR"""
-        return int(n ** parameter)
+        return int(round(n ** parameter))
     l = {'NPAR': npar}
     return l[function_type]
 

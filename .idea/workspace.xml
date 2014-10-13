@@ -39,8 +39,8 @@
       <file leaf-file-name="benchmarks.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PyBench/core/benchmarks.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4946401" vertical-offset="772" max-vertical-offset="2265">
-              <caret line="73" column="30" selection-start-line="73" selection-start-column="30" selection-end-line="73" selection-end-column="30" />
+            <state vertical-scroll-proportion="-0.5160796" vertical-offset="922" max-vertical-offset="2265">
+              <caret line="39" column="40" selection-start-line="39" selection-start-column="40" selection-end-line="39" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -101,16 +101,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="127" max-vertical-offset="1980">
               <caret line="41" column="102" selection-start-line="41" selection-start-column="102" selection-end-line="41" selection-end-column="102" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="codeinterfaces.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../pymatgen/pymatgen/io/gwwrapper/codeinterfaces.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="5010" max-vertical-offset="7560">
-              <caret line="334" column="22" selection-start-line="334" selection-start-column="22" selection-end-line="334" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -887,7 +877,11 @@
       <created>1413205344948</created>
       <updated>1413205344949</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="paralellization scheme">
+      <created>1413207663550</created>
+      <updated>1413207663550</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -939,7 +933,8 @@
     <MESSAGE value="vasp output parsing" />
     <MESSAGE value="output handling" />
     <MESSAGE value="db interaction" />
-    <option name="LAST_COMMIT_MESSAGE" value="db interaction" />
+    <MESSAGE value="paralellization scheme" />
+    <option name="LAST_COMMIT_MESSAGE" value="paralellization scheme" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1240,14 +1235,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/PyCharm30/python_stubs/1290808610/__builtin__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="50173" max-vertical-offset="77265">
-          <caret line="3357" column="8" selection-start-line="3357" selection-start-column="8" selection-end-line="3357" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../GWplotting/GWplotting/collection.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="4267" max-vertical-offset="4920">
@@ -1318,10 +1305,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm30/python_stubs/1290808610/__builtin__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3323124" vertical-offset="7418" max-vertical-offset="77265">
+          <caret line="509" column="4" selection-start-line="509" selection-start-column="4" selection-end-line="509" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/PyBench/core/benchmarks.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4946401" vertical-offset="772" max-vertical-offset="2265">
-          <caret line="73" column="30" selection-start-line="73" selection-start-column="30" selection-end-line="73" selection-end-column="30" />
+        <state vertical-scroll-proportion="-0.5160796" vertical-offset="922" max-vertical-offset="2265">
+          <caret line="39" column="40" selection-start-line="39" selection-start-column="40" selection-end-line="39" selection-end-column="40" />
           <folding />
         </state>
       </provider>

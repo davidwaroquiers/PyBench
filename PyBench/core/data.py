@@ -290,7 +290,7 @@ class VaspData(BaseDataSet):
                 log(entry)
                 self.data.update({str(entry_hash): entry})
                 print(entry['ncpus'], entry['NPAR'], entry['generator_hash'], entry['system'])
-            except None:  # (ParseError, ValueError, IOError):
+            except (ParseError, ValueError, IOError):
                 print('parsing error')
             pass
 

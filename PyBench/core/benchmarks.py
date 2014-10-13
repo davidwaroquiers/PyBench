@@ -70,7 +70,7 @@ class Benchmark():
         with MPRester(mp_key) as mp_database:
             self.structure = mp_database.get_structure_by_material_id(system_id, final=True)
         self.name = str(self.structure.composition.reduced_formula) + "_" + str(self.system_id)
-        self.np_list = [1, 4, 8, 16, 32, 64, 96, 128]
+        self.np_list = [1, 4, 9, 16, 25, 36, 64, 100, 144]
         self.sizes = [1, 2, 3]
         self.parameter_lists = None
         if self.code == 'vasp':

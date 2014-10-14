@@ -55,7 +55,7 @@ class Benchmark():
     """
     describing a benchmark
     """
-    def __init__(self, code='vasp', system_id='mp-149', kpar=True, **kwargs):
+    def __init__(self, code='vasp', system_id='mp-149', kpar=False, **kwargs):
         """
         system_id is to be a mp-id to take a base structure from the mp-database
         kwarg can be used to personalize all lists
@@ -78,8 +78,8 @@ class Benchmark():
         with MPRester(mp_key) as mp_database:
             self.structure = mp_database.get_structure_by_material_id(system_id, final=True)
         self.name = str(self.structure.composition.reduced_formula) + "_" + str(self.system_id)
-        #self.np_list = [1, 4, 9, 16, 25, 36, 64, 100, 144]
-        self.np_list = [1, 8, 27, 64, 125, 216, 343]
+        self.np_list = [1, 4, 9, 16, 25, 36, 64, 100, 144]
+        #self.np_list = [1, 8, 27, 64, 125, 216, 343]
         self.sizes = [1, 2, 3]
         self.parameter_lists = None
         if self.code == 'vasp':

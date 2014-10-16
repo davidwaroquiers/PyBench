@@ -156,7 +156,7 @@ class Benchmark():
 
 def get_benchmark(*args, **kwargs):
     if 'standard_vasp' in args:
-        bm = Benchmark(system_id='mp13')
+        bm = Benchmark(system_id='mp-13')
         bm.sizes = [4]
         bm.inpset.kpoints_settings['grid_density'] = 1
         bm.inpset.kpoints_settings.force_gamma = True

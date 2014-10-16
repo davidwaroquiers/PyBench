@@ -85,13 +85,16 @@ class Benchmark():
         self.parameter_lists = None
         if self.code == 'vasp':
             self.parameter_lists = {'NPAR': [0, 0.5, 1]}
+        self.reset_bar()
+        self.inpset = BenchVaspInputSet()
+        self.inpset.set_input()
+
+    def reset_bar(self):
         xx = 0
         for parameter in self.parameter_lists:
             xx += len(self.parameter_lists[parameter])
         self.total = len(self.np_list)*len(self.sizes)*xx
         self.bar_len = len(self.sizes) + 1 + self.total
-        self.inpset = BenchVaspInputSet()
-        self.inpset.set_input()
 
     def create_input(self):
         """
@@ -99,6 +102,7 @@ class Benchmark():
 
         :return 0 on succes
         """
+        self.reset_bar()
         print('testing executable %s' % self.subject)
         print("creating input for %s system sizes and %s calculations per size:" %
               (len(self.sizes), int(self.total / len(self.sizes))))

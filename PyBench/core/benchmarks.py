@@ -159,7 +159,7 @@ def get_benchmark(*args, **kwargs):
         bm = Benchmark(system_id='mp-13')
         bm.sizes = [4]
         bm.inpset.kpoints_settings['grid_density'] = 1
-        bm.inpset.kpoints_settings.force_gamma = True
+        bm.inpset.force_gamma = True
     else:
         bm = Benchmark(**kwargs)
     return bm

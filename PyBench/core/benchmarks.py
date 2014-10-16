@@ -74,6 +74,7 @@ class Benchmark():
         self.script_list = []
         self.system_id = system_id
         self.kpar = kpar
+        self.kpden = None
         mp_key = os.environ['MP_KEY']
         with MPRester(mp_key) as mp_database:
             self.structure = mp_database.get_structure_by_material_id(system_id, final=True)
@@ -89,6 +90,8 @@ class Benchmark():
             xx += len(self.parameter_lists[parameter])
         self.total = len(self.np_list)*len(self.sizes)*xx
         self.bar_len = len(self.sizes) + 1 + self.total
+        self.inpset = BenchVaspInputSet()
+        self.inpset.set_input()
 
     def create_input(self):
         """
@@ -96,8 +99,6 @@ class Benchmark():
 
         :return 0 on succes
         """
-        inpset = BenchVaspInputSet()
-        inpset.set_input()
         print('testing executable %s' % self.subject)
         print("creating input for %s system sizes and %s calculations per size:" %
               (len(self.sizes), int(self.total / len(self.sizes))))
@@ -114,16 +115,16 @@ class Benchmark():
                     kpar = itr(n)
                 else:
                     kpar = 1
-                inpset.incar_settings.update({'KPAR': kpar})
+                self.inpset.incar_settings.update({'KPAR': kpar})
                 for x in self.parameter_lists:
                     for o in self.parameter_lists[x]:
                         sys.stdout.write("*")
                         sys.stdout.flush()
                         v = functions(x)(o, int(n/kpar))
-                        inpset.incar_settings.update({x: v})
+                        self.inpset.incar_settings.update({x: v})
                         path = '%s_super%s_par%s%s%s' % (self.name, s, n, x, o)
-                        inpset.incar_settings.update({'system': '%s_super%s' % (self.name, s)})
-                        inpset.write_input(structure=struc, output_dir=path)
+                        self.inpset.incar_settings.update({'system': '%s_super%s' % (self.name, s)})
+                        self.inpset.write_input(structure=struc, output_dir=path)
                         q = self.manager.qadapter
                         q.set_mpi_ncpus(n)
                         job_string = q.get_script_str(job_name=self.name+'s'+str(s)+'np'+str(n),
@@ -153,5 +154,12 @@ class Benchmark():
         return 0
 
 
-def get_benchmark(**kwargs):
-    return Benchmark(**kwargs)
+def get_benchmark(*args, **kwargs):
+    if 'standard_vasp' in args:
+        bm = Benchmark(system_id='mp13')
+        bm.sizes = [4]
+        bm.inpset.kpoints_settings['grid_density'] = 1
+        bm.inpset.kpoints_settings.force_gamma = True
+    else:
+        bm = Benchmark(**kwargs)
+    return bm

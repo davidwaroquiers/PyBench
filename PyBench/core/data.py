@@ -215,6 +215,8 @@ class BaseDataSet(object):
                             y.append(d[2])
                         elif mode == 'energies':
                             y.append(d[3] / (float(system[-1]))**3)
+                        elif mode == 'efficiency':
+                            y.append((t1[system]/d[2])/d[1])
                         en.append(d[3])
                 w = "%s@NPAR%s" % (system, npar)
                 l1.append(w)
@@ -227,6 +229,8 @@ class BaseDataSet(object):
         if mode == 'speedup':
             plot.plot([0, my], [0, my], '-')
             plot.ylabel('speedup')
+        if mode == 'efficiency':
+            plot.ylabel('efficiency')
         elif mode == 'energies':
             plot.ylabel('Total energy (eV)')
         elif mode == 'abstiming':

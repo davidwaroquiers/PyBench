@@ -21,6 +21,6 @@ if __name__ == "__main__":
     desc = get_description(code=code)
     if not os.path.isfile('description'):
         desc.print_template()
-    bench = get_benchmark(code=code)
+    bench = get_benchmark('standard_vasp', code=code)
     bench.create_input()
     bench.create_job_collection()

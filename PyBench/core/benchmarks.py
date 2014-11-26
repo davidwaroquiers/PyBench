@@ -127,7 +127,7 @@ class Benchmark():
                         v = functions(x)(o, int(n/kpar))
                         self.inpset.incar_settings.update({x: v})
                         path = '%s_super%s_par%s%s%s' % (self.name, s, n, x, o)
-                        path = os.path.join(os.path.abspath(os.path.curdir), path)
+                        path = os.path.join(os.getcwd(), path)
                         self.inpset.incar_settings.update({'system': '%s_super%s' % (self.name, s)})
                         self.inpset.write_input(structure=struc, output_dir=path)
                         q = self.manager.qadapter

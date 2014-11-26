@@ -21,7 +21,7 @@ from pymongo import Connection
 import pprint
 import matplotlib.pyplot as plt
 
-symbol = [' ', 'o', '^', 's']
+symbol = [' ', 'o', '^', 's', '1']
 text = "Description:\n"
 
 

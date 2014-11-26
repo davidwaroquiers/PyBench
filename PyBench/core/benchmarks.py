@@ -127,13 +127,15 @@ class Benchmark():
                         v = functions(x)(o, int(n/kpar))
                         self.inpset.incar_settings.update({x: v})
                         path = '%s_super%s_par%s%s%s' % (self.name, s, n, x, o)
+                        path = os.path.join(os.path.abspath(os.path.curdir), path)
                         self.inpset.incar_settings.update({'system': '%s_super%s' % (self.name, s)})
                         self.inpset.write_input(structure=struc, output_dir=path)
                         q = self.manager.qadapter
-                        q.set_mpi_ncpus(n)
+                        q.set_mpi_procs(n)
                         job_string = q.get_script_str(job_name=self.name+'s'+str(s)+'np'+str(n),
                                                       executable=self.subject,
                                                       launch_dir=path,
+                                                      partition=None,
                                                       qerr_path=os.path.join(path, 'qerr.out'),
                                                       qout_path=os.path.join(path, 'qout.out'))
                         self.script_list.append(os.path.join(path, 'job.sh'))
@@ -160,10 +162,12 @@ class Benchmark():
 
 def get_benchmark(*args, **kwargs):
     if 'standard_vasp' in args:
+        "the 64 iron atom cell described on the vasp pages"
         bm = Benchmark(system_id='mp-13')
         bm.sizes = [4]
         bm.inpset.kpoints_settings['grid_density'] = 1
         bm.inpset.force_gamma = True
     else:
+        "default: 111 222 333 supercells of silicon"
         bm = Benchmark(**kwargs)
     return bm

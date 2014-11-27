@@ -178,7 +178,7 @@ class BaseDataSet(object):
         plot = plt
         l1 = []
         l2 = []
-        timing = '\n\nAbsolute timing @ ncpus=1:'
+        timing = '\n\nAbsolute timing / nbands @ ncpus=1:'
         mx, my = 0, 0
         t1 = {}
         y_data = {}
@@ -268,7 +268,7 @@ class VaspData(BaseDataSet):
                 entry = {
                     'system': path.split('/')[1].split('_par')[0],
                     "NPAR": xml.parameters.get('NPAR'),
-                    'nband': xml.parameters.get('NBAND'),
+                    'nband': xml.parameters.get('NBANDS'),
                     'ncpus': int(out.run_stats['cores']),
                     "final_energy": xml.final_energy,
                     "vasp_version": xml.vasp_version,
@@ -276,7 +276,7 @@ class VaspData(BaseDataSet):
                     "generator_hash": hash(frozenset(xml.generator)),
                     "run_stats": out.run_stats}
                 entry_hash = hash((entry['ncpus'], entry['NPAR'], entry['generator_hash'], entry['system']))
-                log(entry)
+                #print(entry)
                 self.data.update({str(entry_hash): entry})
                 print(entry['ncpus'], entry['NPAR'], entry['generator_hash'], entry['system'])
         except (ParseError, ValueError, IOError):

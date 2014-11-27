@@ -69,8 +69,8 @@
       <file leaf-file-name="data.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PyBench/core/data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45054945" vertical-offset="2544" max-vertical-offset="4860">
-              <caret line="186" column="31" selection-start-line="186" selection-start-column="31" selection-end-line="186" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.42307693" vertical-offset="3939" max-vertical-offset="4860">
+              <caret line="278" column="17" selection-start-line="278" selection-start-column="17" selection-end-line="278" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -859,7 +859,11 @@
       <created>1417081306230</created>
       <updated>1417081306230</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="time per band">
+      <created>1417092666406</created>
+      <updated>1417092666406</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -914,7 +918,8 @@
     <MESSAGE value="paralellization scheme" />
     <MESSAGE value="added the standard vasp benchmark 64 iron atom cell" />
     <MESSAGE value="queout fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="queout fix" />
+    <MESSAGE value="time per band" />
+    <option name="LAST_COMMIT_MESSAGE" value="time per band" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1293,8 +1298,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PyBench/core/data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45054945" vertical-offset="2544" max-vertical-offset="4860">
-          <caret line="186" column="31" selection-start-line="186" selection-start-column="31" selection-end-line="186" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.42307693" vertical-offset="3939" max-vertical-offset="4860">
+          <caret line="278" column="17" selection-start-line="278" selection-start-column="17" selection-end-line="278" selection-end-column="17" />
           <folding />
         </state>
       </provider>

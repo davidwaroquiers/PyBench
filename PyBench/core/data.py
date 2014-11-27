@@ -200,7 +200,7 @@ class BaseDataSet(object):
             #npars[s].append(entry['NPAR'])
             if entry['ncpus'] == 1:
                 t1[entry['system']] = t
-        print(t1)
+        print('t1:', t1)
         for system in sorted(self.systems):
             #npars[system] = sorted(set(npars[system]))
             y_data[system].sort()

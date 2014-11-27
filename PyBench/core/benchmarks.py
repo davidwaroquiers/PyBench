@@ -136,8 +136,8 @@ class Benchmark():
                                                       executable=self.subject,
                                                       launch_dir=path,
                                                       partition=None,
-                                                      qerr_path=os.path.join(path, 'qerr.out'),
-                                                      qout_path=os.path.join(path, 'qout.out'))
+                                                      qerr_path='qerr.out',
+                                                      qout_path='qout.out')
                         self.script_list.append(os.path.join(path, 'job.sh'))
                         f = open(self.script_list[-1], 'w')
                         f.write(job_string)

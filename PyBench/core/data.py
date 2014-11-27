@@ -194,7 +194,7 @@ class BaseDataSet(object):
                 pnp = 0
             else:
                 pnp = 0.5
-            t = entry['run_stats']['Total CPU time used (sec)']
+            t = entry['run_stats']['Total CPU time used (sec)']/entry['nband']
             e = entry['final_energy']
             y_data[s].append((pnp, entry['ncpus'], t, e, ))
             #npars[s].append(entry['NPAR'])
@@ -268,6 +268,7 @@ class VaspData(BaseDataSet):
                 entry = {
                     'system': path.split('/')[1].split('_par')[0],
                     "NPAR": xml.parameters.get('NPAR'),
+                    'nband': xml.parameters.get('NBAND'),
                     'ncpus': int(out.run_stats['cores']),
                     "final_energy": xml.final_energy,
                     "vasp_version": xml.vasp_version,
@@ -284,6 +285,7 @@ class VaspData(BaseDataSet):
                 inc = Incar(os.path.join(path, "INCAR"))
                 entry = {
                     "NPAR": inc.as_dict()['NPAR'],
+                    "nband": inc.as_dict()['nband'],
                     'ncpus': int(out.run_stats['cores']),
                     "final_energy": -1,
                     "vasp_version": 'v',
